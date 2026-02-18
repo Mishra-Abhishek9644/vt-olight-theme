@@ -1,0 +1,427 @@
+<!-- newsletter.liquid -->
+{%- if section.settings.enable_newletter_footer -%}
+{%- liquid
+  assign bg_image = section.settings.image_bg
+  assign newletter_color = section.settings.newletter_color
+-%}
+<style>
+  .customstyle{{ section.id }}{
+    {%- if newletter_color != 'rgba(0,0,0,0)' -%}
+    --g-color-heading : {{ newletter_color }};
+    --color-body-text-rgb : {{ newletter_color }};
+    {%- endif -%}
+    position: relative;
+    z-index: {{ section.settings.zindex }};
+    background-position:center !important;
+    background-repeat:{{ section.settings.e_repeat }} !important;
+    background-size:{{ section.settings.e_size }} !important;
+  }
+  .mail-section-footer .form-group {
+    border-radius:var(--g-input-radius) !important;
+    max-width: 615px;
+    margin: auto;
+    gap: 10px;
+  }
+  .mail-section-footer .form-group input::placeholder{
+      color: {{ section.settings.color_input }} !important;
+  }
+  .mail-section-footer .form-group .form-control{
+    border:none;
+    box-shadow: none;
+    padding: 14px 20px;
+    background-color: {{ section.settings.bg_input }};
+    border-radius: 9px;
+    color: {{ section.settings.color_input }} !important;
+  }
+  .customstyle{{ section.id }} .section-title-1 {
+    font-weight: var(--g-h4-font-weight);
+    font-size: var(--g-h4-font-size);
+    line-height: var(--g-h4-font-lineheight);
+    letter-spacing: var(--g-h4-font-spacing);
+    text-transform:var(--g-h4-font-transform);
+    margin-bottom: 20px!important;
+  }
+  .customstyle{{ section.id }} {
+    overflow: hidden;
+  }
+
+  @media (min-width: 1200px) {
+    .customstyle{{ section.id }} .font-family-2.txt-body-70 {
+      font-size: 18px;
+    }   
+  }
+
+  .customstyle{{ section.id }} .btn-newsletterfooter {
+    background-color: {{ section.settings.bg_colorbtn }};
+    color: {{ section.settings.color_btn }};
+    height: var(--g-input-height);
+    padding: 0 30px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .2px;
+  }
+  .customstyle{{ section.id }} .btn-newsletterfooter:hover {
+    background-color: {{ section.settings.bg_colorbtn_hover }};
+    color: {{ section.settings.color_btn_hover }};
+  }
+</style>
+<section class="customstyle{{ section.id }} lazyload " 
+data-bgset="{% render 'bgset', image: bg_image %}"
+data-sizes="auto"
+data-parent-fit="cover" 
+data-section-id="{{ section.id }}"  
+data-aos="{{ section.settings.animation }}"
+data-section-type="newletter-footer"  >
+  {%- render 'style-section' -%}
+  <div class="{{ section.settings.setwidth }} text-center">
+    {%- assign e_left = section.settings.html_left -%}
+    <div class="row d-flex justify-content-center">
+      <div class="{% if e_left %} col-lg-11 {% else %} col-lg-8 {% endif %}">
+        <div class="p-md-0 px-3">
+          {%- render 'section-heading' -%} 
+          {%- if e_left -%}
+          <div class="row">
+          {%- endif -%}
+            {%- if e_left -%}
+              <div class="left_newlleters text-left col-lg-6 col-12">
+                {{ section.settings.html_left_block }}
+              </div>
+            {%- endif -%}
+            <div class="form-vertical mail-section-footer  {% if e_left %} col-lg-6 col-12  pt-2 {% else %} mt-n3  {% endif %}">
+              {%- form 'customer' , id: 'ContactFooterTop' -%}
+                {{ form.errors | default_errors }}
+                {%- if form.posted_successfully? -%}
+                  <p class="form-success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+                {%- else -%}
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <label for="NewsletterEmail-{{ block.id }}" class="label--hidden">{{ 'general.newsletter_form.newsletter_label' | t }}</label>
+                  <div class=" form-group text-center input-group mb-0 align-items-center">
+                    <input class="form-control" type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" name="contact[email]" id="NewsletterEmail-{{ block.id }}" autocorrect="off" autocapitalize="off">
+                    <button type="submit" class="btn btn-newsletterfooter" name="commit">
+                      <span class="" > {{ section.settings.btn_newsletter }} </span>
+                    </button>
+                  </div>
+                {%- endif -%}
+              {%- endform -%}
+            </div>
+            {%- if e_left -%}
+          </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Newsletter Footer",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_newletter_footer",
+      "label": "Enable ",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-down",
+          "label": "Fade Down"
+        },
+        {
+          "value": "fade-left",
+          "label": "Fade Left"
+        },
+        {
+          "value": "fade-right",
+          "label": "Fade Right"
+        },
+        {
+          "value": "fade-up-right",
+          "label": "Fade Up Right"
+        },
+        {
+          "value": "fade-up-left",
+          "label": "Fade Up Left"
+        },
+        {
+          "value": "fade-down-right",
+          "label": "Fade Down Right"
+        },
+        {
+          "value": "fade-down-left",
+          "label": "Fade Down Left"
+        },
+        {
+          "value": "flip-up",
+          "label": "Flip Up"
+        },
+        {
+          "value": "flip-down",
+          "label": "Flip Down"
+        },
+        {
+          "value": "flip-left",
+          "label": "Flip Left"
+        },
+        {
+          "value": "flip-right",
+          "label": "Flip Right"
+        },
+        {
+          "value": "slide-up",
+          "label": "Slide Up"
+        },
+        {
+          "value": "slide-down",
+          "label": "Slide Down"
+        },
+        {
+          "value": "slide-left",
+          "label": "Slide Left"
+        },
+        {
+          "value": "slide-right",
+          "label": "Slide Right"
+        },
+        {
+          "value": "zoom-in",
+          "label": "Zoom In"
+        },
+        {
+          "value": "zoom-in-up",
+          "label": "Zoom In Up"
+        },
+        {
+          "value": "zoom-in-down",
+          "label": "Zoom In Down"
+        },
+        {
+          "value": "zoom-in-left",
+          "label": "Zoom In Left"
+        },
+        {
+          "value": "zoom-in-right",
+          "label": "Zoom In Right"
+        },
+        {
+          "value": "zoom-out",
+          "label": "Zoom Out"
+        },
+        {
+          "value": "zoom-out-up",
+          "label": "Zoom Out Up"
+        },
+        {
+          "value": "zoom-out-down",
+          "label": "Zoom Out Down"
+        },
+        {
+          "value": "zoom-out-left",
+          "label": "Zoom Out Feft"
+        },
+        {
+          "value": "zoom-out-right",
+          "label": "Zoom Out Right"
+        }
+      ],
+      "label": "Select Animation"
+    },
+    {
+      "type": "select",
+      "id": "setwidth",
+      "label": "Full Width",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Box"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "bgsection",
+      "label": "Background Section",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "newletter_color",
+      "label": "Color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "bg_input",
+      "label": "Background input"
+    },
+    {
+      "type": "color",
+      "id": "color_input",
+      "label": "Color input"
+    },
+    {
+      "type": "color",
+      "id": "color_btn",
+      "label": "Color button"
+    },
+    {
+      "type": "color",
+      "id": "bg_colorbtn",
+      "label": "Background button"
+    },
+    {
+      "type": "color",
+      "id": "color_btn_hover",
+      "label": "Color button hover"
+    },
+    {
+      "type": "color",
+      "id": "bg_colorbtn_hover",
+      "label": "Background button hover"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg",
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "e_size",
+      "label": "Background Size",
+      "default": "auto",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "e_repeat",
+      "label": "Background Repeat",
+      "default": "no-repeat",
+      "options": [
+        {
+          "value": "no-repeat",
+          "label": "No-repeat"
+        },
+        {
+          "value": "repeat",
+          "label": "Repeat"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_top",
+      "label": "Sub Title Top",
+      "default": "Sub Title Top"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title Newletters"
+    },
+    {
+      "type": "textarea",
+      "id": "des",
+      "label": "HTML / Description"
+    },
+    {
+      "type": "header",
+      "content": "Settings Newsletter"
+    },
+    {
+      "type": "liquid",
+      "id": "btn_newsletter",
+      "label": "HTML / Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "html_left",
+      "label": "Enable left Block HTML",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "html_left_block",
+      "label": "Left HTML / Description"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding "
+    },
+    {
+      "type": "text",
+      "id": "paddingsection",
+      "label": "Padding Section",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "paddingmobile",
+      "label": "Padding Section Mobile",
+      "default": "40px 0px 40px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "header",
+      "content": "Section Margin "
+    },
+    {
+      "type": "text",
+      "id": "marginsection",
+      "label": "Margin Section",
+      "default": "0px 0px 0px 0px",
+      "info": "Margin: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "marginmobile",
+      "label": "Margin Mobile",
+      "default": "0px 0px 0px 0px",
+      "info": "Margin: Top Right Bottom Left"
+    }
+  ]
+}
+{% endschema %}

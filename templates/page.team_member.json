@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "s_team_member",
+      "blocks": {
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-0": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/o-team_1.png",
+            "name": "Abdul Khalek",
+            "position": "CEO & Founder",
+            "twitter": "https://twitter.com/",
+            "google": "https://plus.google.com",
+            "facebook": "https://www.facebook.com/",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        },
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-1": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/o-team_2.png",
+            "name": "Vera Duncan",
+            "position": "Producer",
+            "twitter": "https://twitter.com/",
+            "google": "https://plus.google.com",
+            "facebook": "https://www.facebook.com/",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        },
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-2": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/o-team_3.png",
+            "name": "Michella Ore",
+            "position": "Developer",
+            "twitter": "https://twitter.com/",
+            "google": "https://plus.google.com",
+            "facebook": "https://www.facebook.com/",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        },
+        "ef393f42-f5c0-45d5-a2a1-4b393bd9d289": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/o-team_4.png",
+            "name": "Jennifer C.",
+            "position": "Designer",
+            "twitter": "#",
+            "google": "#",
+            "facebook": "#",
+            "linkedin": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-0",
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-1",
+        "template--16716887458110__abb14abe-2a33-4a6b-aaa1-d36d5422d78d-1666689151286d1fe7-2",
+        "ef393f42-f5c0-45d5-a2a1-4b393bd9d289"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container",
+        "bgsection": "",
+        "title_top": "Top Team",
+        "title": "We Pride Ourselves On Have A  Team Of Highly",
+        "des": "",
+        "align-heading": "center",
+        "items": "4",
+        "layout": "2",
+        "paddingsection": "48px 0px 40px 0px",
+        "paddingmobile": "60px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

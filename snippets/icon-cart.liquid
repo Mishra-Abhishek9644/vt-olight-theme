@@ -1,0 +1,69 @@
+
+{%- if section.settings.svg_cart -%}
+  {%- assign svg_cart = section.settings.svg_cart -%}
+{%- else -%}
+{%- assign svg_cart = settings.svg_cart -%}
+{%- endif -%}
+
+{%- case svg_cart -%}
+  {%- when 'cart-1' -%}
+    <svg class="svg-cart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M15.4094 7.86486V7.62162C15.4094 6.78486 15.0527 5.9773 14.4128 5.38378C13.7729 4.79027 12.9022 4.45946 12 4.45946C11.0978 4.45946 10.2271 4.79027 9.5872 5.38378C8.94728 5.9773 8.5906 6.78486 8.5906 7.62162V7.86486H15.4094ZM7.01703 12.4865V9.32432H6.58693C5.90505 9.32432 5.33856 9.81081 5.27562 10.4432L4.58325 18.227C4.52031 18.9276 5.11826 19.5405 5.88407 19.5405H18.1159C18.8817 19.5405 19.4797 18.9276 19.4168 18.227L18.7244 10.4432C18.6614 9.81081 18.095 9.32432 17.4131 9.32432H16.983V12.4865C16.983 12.8854 16.6263 13.2162 16.1962 13.2162C15.7661 13.2162 15.4094 12.8854 15.4094 12.4865V9.32432H8.5906V12.4865C8.5906 12.8854 8.23393 13.2162 7.80382 13.2162C7.37371 13.2162 7.01703 12.8854 7.01703 12.4865ZM7.01703 7.62162C7.01703 6.39568 7.54156 5.21838 8.47521 4.35243C9.40886 3.48649 10.6782 3 12 3C13.3218 3 14.5911 3.48649 15.5248 4.35243C16.4584 5.21838 16.983 6.39568 16.983 7.62162V7.86486H17.4131C18.9132 7.86486 20.1616 8.93514 20.2875 10.3168L20.9903 18.1005C21.1267 19.6573 19.8049 21 18.1159 21H5.88407C4.1951 21 2.8733 19.6573 3.00968 18.1005L3.71254 10.3168C3.83843 8.93514 5.08679 7.86486 6.58693 7.86486H7.01703V7.62162Z" fill="currentColor"/>
+    </svg>
+  {%- when 'cart-2' -%}
+    <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g >
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5556 3.44444H3.44444V20.5556H20.5556V3.44444ZM3.44444 1C2.09442 1 1 2.09441 1 3.44444V20.5556C1 21.9056 2.09441 23 3.44444 23H20.5556C21.9056 23 23 21.9056 23 20.5556V3.44444C23 2.09442 21.9056 1 20.5556 1H3.44444Z" fill="currentColor"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9998 12C8.31338 12 5.88867 8.92758 5.88867 5.88892H8.33312C8.33312 7.73914 9.81952 9.55558 11.9998 9.55558C14.1801 9.55558 15.6664 7.73914 15.6664 5.88892H18.1109C18.1109 8.92758 15.6861 12 11.9998 12Z" fill="currentColor"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_4428_3724">
+      <rect width="22" height="22" fill="white" transform="translate(1 1)"/>
+      </clipPath>
+      </defs>
+    </svg>
+  {%- when 'cart-3' -%}
+    <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g >
+      <path d="M11.4286 8.14296V1.57153H13.1429V8.14296H24L19.6366 21.8572H4.36343L0 8.14296H11.4286ZM2.344 9.85725L5.61714 20.143H18.3829L21.656 9.85725H2.34286H2.344Z" fill="currentColor" stroke="currentColor" stroke-width="0.3"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_4428_3849">
+      <rect width="24" height="21.7143" fill="white" transform="translate(0 1)"/>
+      </clipPath>
+    </defs>
+    </svg>
+  {%- when 'cart-4' -%}
+    <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g >
+      <path d="M17 12C16.8783 10.3844 16.8493 8.62292 16.6432 6.82973C16.3117 3.95723 14.8592 2 12 2C9.14079 2 7.68828 3.95723 7.3568 6.8286C7.15067 8.62292 7.12175 10.3833 7 11.9989" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="bevel"/>
+      <path d="M22 23V9H2V23H22Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_4428_3972">
+      <rect width="22" height="23" fill="white" transform="translate(1 1)"/>
+      </clipPath>
+      </defs>
+    </svg>
+  {%- when 'cart-5' -%}
+    <svg class="svg-cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g>
+      <path d="M2 23.9843V6.25565L4.08696 6.26087V6.29217L21.8261 6.27756V23.9833H2V23.9843ZM19.7391 8.33217H4.08696V21.8974H19.7391V8.33217ZM14.5217 5.32487C14.5217 3.19617 14.0073 1.98261 11.913 1.98261C9.82609 1.98261 9.30435 3.19722 9.30435 5.32487V6.27652H7.21739V4.84904C7.21739 1.24174 9.59026 0 11.913 0C14.0177 0 16.6087 1.41287 16.6087 4.84904V6.27652H14.5217V5.32487Z" fill="currentColor"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_4428_4093">
+      <rect width="19.8261" height="24" fill="white" transform="translate(2)"/>
+      </clipPath>
+      </defs>
+    </svg> 
+  {%- else -%}
+    <svg focusable="false" width="20" height="18" class="svg-cart" viewBox="0 0 20 18">
+    <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+    <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+  </svg>
+{%- endcase -%}
+
+
+
+
+

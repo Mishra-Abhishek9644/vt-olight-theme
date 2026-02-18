@@ -1,0 +1,398 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar-slide": {
+      "type": "announcement-bar-slide",
+      "blocks": {
+        "a00daf6f-fb1c-4351-80dc-24e405bf630e": {
+          "type": "Item",
+          "settings": {
+            "code": "FREE SHIPPING ON ORDERS $135+",
+            "button_text": "",
+            "button_link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "a00daf6f-fb1c-4351-80dc-24e405bf630e"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "animation": "fade",
+        "size_text": "small",
+        "announ_type": "carousel",
+        "scroll_dot": "dot",
+        "size_icon": 24,
+        "speed": 10,
+        "scroll_type": "from-right",
+        "background": "#211c1b",
+        "gradient_bg": "",
+        "text": "#ffffff"
+      }
+    },
+    "scrolling_text_nRCERa": {
+      "type": "scrolling-text",
+      "blocks": {
+        "item_pBDW76": {
+          "type": "item",
+          "settings": {
+            "code": "up to 30% off everything",
+            "image": "shopify://shop_images/o-h1-scroll.png"
+          }
+        },
+        "item_mwRTMh": {
+          "type": "item",
+          "settings": {
+            "code": "Register to enjoy 10% off* your first online order",
+            "image": "shopify://shop_images/o-h1-scroll.png"
+          }
+        },
+        "item_CMJeFr": {
+          "type": "item",
+          "settings": {
+            "code": "free delivery for next 3 orders",
+            "image": "shopify://shop_images/o-h1-scroll.png"
+          }
+        },
+        "item_GM3kfY": {
+          "type": "item",
+          "settings": {
+            "code": "20% off most loveled - new lines added",
+            "image": "shopify://shop_images/o-h1-scroll.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_pBDW76",
+        "item_mwRTMh",
+        "item_CMJeFr",
+        "item_GM3kfY"
+      ],
+      "settings": {
+        "animation": "fade",
+        "size_text": "subtop",
+        "text_style": "solid",
+        "text_transform": "uppercase",
+        "speed": 10,
+        "scroll_type": "from-right",
+        "background": "#22201d",
+        "gradient_bg": "",
+        "text": "#ffffff",
+        "size_icon": 16,
+        "radius_image": 0,
+        "space_image": "mx-4",
+        "paddingsection": "9px 0px 9px 0px",
+        "paddingmobile": "9px 0px 9px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "menu_banner_classic_QpbpHq": {
+          "type": "menu-banner-classic",
+          "settings": {
+            "menu_title": "Homee",
+            "menu_width": "container-fluid",
+            "menu_column": 6,
+            "enable_menu_banner": true,
+            "image_size": "portrait",
+            "menu_banner_width": 100,
+            "menu_banner_image_1": "shopify://shop_images/mega_menu_1.png",
+            "menu_banner_html_1": "",
+            "menu_banner_btn_1": "01. Homepage",
+            "menu_banner_link_1": "https://vt-olight.myshopify.com/?preview_theme_id=179015745850",
+            "menu_banner_image_2": "shopify://shop_images/mega_menu_2.png",
+            "menu_banner_html_2": "",
+            "menu_banner_btn_2": "02. Homepage",
+            "menu_banner_link_2": "https://vt-olight.myshopify.com/?preview_theme_id=179015778618",
+            "menu_banner_image_3": "shopify://shop_images/mega_menu_3.png",
+            "menu_banner_html_3": "",
+            "menu_banner_btn_3": "03. Homepage",
+            "menu_banner_link_3": "https://vt-olight.myshopify.com/?preview_theme_id=179015811386",
+            "menu_banner_image_4": "shopify://shop_images/mega_menu_4.png",
+            "menu_banner_html_4": "",
+            "menu_banner_btn_4": "04. Homepage",
+            "menu_banner_link_4": "https://vt-olight.myshopify.com/?preview_theme_id=179015844154",
+            "menu_banner_image_5": "shopify://shop_images/mega_menu_5.png",
+            "menu_banner_html_5": "",
+            "menu_banner_btn_5": "05. Homepage",
+            "menu_banner_link_5": "https://vt-olight.myshopify.com/?preview_theme_id=179015876922",
+            "menu_banner_image_6": "shopify://shop_images/mega_menu_6.png",
+            "menu_banner_html_6": "",
+            "menu_banner_btn_6": "06. Homepage",
+            "menu_banner_link_6": "https://vt-olight.myshopify.com/?preview_theme_id=179015909690",
+            "menu_banner_html_7": "",
+            "menu_banner_btn_7": "07. Homepage",
+            "menu_banner_link_7": "https://vt-sunic.myshopify.com/?preview_theme_id=138693312697",
+            "menu_banner_html_8": "",
+            "menu_banner_btn_8": "08. Homepage",
+            "menu_banner_link_8": "https://vt-sunic.myshopify.com/?preview_theme_id=138693378233",
+            "menu_banner_html_9": "",
+            "menu_banner_btn_9": "09. Homepage",
+            "menu_banner_link_9": "https://vt-sunic.myshopify.com/?preview_theme_id=138693411001"
+          }
+        },
+        "menu_banner_classic_TXXFG7": {
+          "type": "menu-banner-classic",
+          "settings": {
+            "menu_title": "Shop",
+            "menu_width": "container-fluid",
+            "menu_column": 3,
+            "enable_menu_banner": true,
+            "image_size": "auto",
+            "menu_banner_width": 30,
+            "menu_banner_html_1": "<h3>\nFASHION \n<br>\nTRENDING\n</h3>",
+            "menu_banner_btn_1": "Shop now",
+            "menu_banner_link_1": "shopify://collections/accessories",
+            "menu_banner_html_2": "",
+            "menu_banner_btn_2": "",
+            "menu_banner_link_2": "",
+            "menu_banner_html_3": "",
+            "menu_banner_btn_3": "",
+            "menu_banner_link_3": "",
+            "menu_banner_html_4": "",
+            "menu_banner_btn_4": "",
+            "menu_banner_link_4": "",
+            "menu_banner_html_5": "",
+            "menu_banner_btn_5": "",
+            "menu_banner_link_5": "",
+            "menu_banner_html_6": "",
+            "menu_banner_btn_6": "",
+            "menu_banner_link_6": "",
+            "menu_banner_html_7": "",
+            "menu_banner_btn_7": "",
+            "menu_banner_link_7": "",
+            "menu_banner_html_8": "",
+            "menu_banner_btn_8": "",
+            "menu_banner_link_8": "",
+            "menu_banner_html_9": "",
+            "menu_banner_btn_9": "",
+            "menu_banner_link_9": ""
+          }
+        },
+        "menu_collection_LdDdz9": {
+          "type": "menu-collection",
+          "settings": {
+            "menu_title": "Shop",
+            "menu_width": "container-fluid",
+            "menu_column": 3,
+            "enable_menu_collection": true,
+            "enable_items_count": true,
+            "image_size": "auto",
+            "menu_collection_width": 50,
+            "menu_collection_1": "bracelets",
+            "menu_collection_2": "chockers",
+            "menu_collection_3": "",
+            "menu_collection_4": "",
+            "menu_collection_5": "",
+            "menu_collection_6": ""
+          }
+        },
+        "9d3d821c-82a9-439a-b2db-6700a3c6685f": {
+          "type": "menu-product",
+          "settings": {
+            "menu_title": "products",
+            "menu_width": "container-fluid",
+            "menu_column": 4,
+            "enable_menu_product": true,
+            "menu_product_width": 20,
+            "menu_product_1": "bold-twist-braided-ring",
+            "menu_product_2": "",
+            "menu_product_3": "",
+            "menu_product_4": "",
+            "menu_product_5": "",
+            "menu_product_6": ""
+          }
+        },
+        "0f4d122e-cf9d-4fbf-8082-85a6cb05155f": {
+          "type": "menu-banner",
+          "settings": {
+            "menu_title": "pages",
+            "menu_width": "container",
+            "menu_column": 2,
+            "enable_menu_banner": true,
+            "menu_banner_width": 70,
+            "menu_banner_height": 300,
+            "menu_banner_size_title": "h4",
+            "menu_banner_image_1": "shopify://shop_images/o-mega-banner_2.png",
+            "menu_banner_position_text_1": "bot-left",
+            "menu_banner_subheading_1": "All Styles",
+            "menu_banner_heading_1": "Min. 65% Off",
+            "menu_banner_paragraph_1": "",
+            "menu_banner_btn_1": "Discover now",
+            "menu_banner_link_1": "shopify://collections",
+            "menu_banner_image_2": "shopify://shop_images/o-h1-banner_2.jpg",
+            "menu_banner_position_text_2": "bot-left",
+            "menu_banner_subheading_2": "Lingerie",
+            "menu_banner_heading_2": "Flat 50% Off",
+            "menu_banner_paragraph_2": "",
+            "menu_banner_btn_2": "Discover now",
+            "menu_banner_link_2": "shopify://collections",
+            "menu_banner_position_text_3": "bot-left",
+            "menu_banner_subheading_3": "Best-selling",
+            "menu_banner_heading_3": "New Arrivals",
+            "menu_banner_paragraph_3": "",
+            "menu_banner_btn_3": "Discover now",
+            "menu_banner_link_3": "shopify://collections"
+          }
+        },
+        "96e8331c-f8e4-4b9d-802b-4a659893f052": {
+          "type": "menu-banner-classic",
+          "settings": {
+            "menu_title": "blog",
+            "menu_width": "container",
+            "menu_column": 3,
+            "enable_menu_banner": true,
+            "image_size": "wide",
+            "menu_banner_width": 30,
+            "menu_banner_image_1": "shopify://shop_images/o-h1-banner_1.jpg",
+            "menu_banner_html_1": "<h5 class=\"mb-0\">Flat 50% Off</h5>\n<p>Our products are designed for everyone.</p>",
+            "menu_banner_btn_1": "Shop now",
+            "menu_banner_link_1": "shopify://collections",
+            "menu_banner_html_2": "<h5 class=\"mb-0\">Flat 50% Off</h5>\n<p>sss</p>",
+            "menu_banner_btn_2": "",
+            "menu_banner_link_2": "",
+            "menu_banner_html_3": "",
+            "menu_banner_btn_3": "",
+            "menu_banner_link_3": "",
+            "menu_banner_html_4": "",
+            "menu_banner_btn_4": "",
+            "menu_banner_link_4": "",
+            "menu_banner_html_5": "",
+            "menu_banner_btn_5": "",
+            "menu_banner_link_5": "",
+            "menu_banner_html_6": "",
+            "menu_banner_btn_6": "",
+            "menu_banner_link_6": "",
+            "menu_banner_html_7": "",
+            "menu_banner_btn_7": "",
+            "menu_banner_link_7": "",
+            "menu_banner_html_8": "",
+            "menu_banner_btn_8": "",
+            "menu_banner_link_8": "",
+            "menu_banner_html_9": "",
+            "menu_banner_btn_9": "",
+            "menu_banner_link_9": ""
+          }
+        },
+        "humbergerbar_kz4hBK": {
+          "type": "humbergerbar",
+          "settings": {
+            "humber_content": "<span style=\"\n    font-size: calc(var(--g-h1-font-size) + 2px);\n    text-transform: capitalize;\n    font-weight: 500;\n    line-height: 66px;\n    display: block;\n\">\nstory\n<br>\nmaterials\n<br>\ngifts \n<br>\nstore\n</span>",
+            "humber_center": "<span style=\"font-size: calc(var(--g-font-size) + 1px);color: var(--color-body-text);\">\n<span>\n<span class=\"d-flex align-items-center mb-1\" style=\"\n    gap: 12px;\n\">\n<i class=\"fa fa-phone\" style=\"\n    transform: rotate(90deg);\n\"></i>\n<span style=\"\n    color: var(--g-main);\n\">\n+(48) 555-0120-88\n</span>\n</span>\n<span class=\"d-flex align-items-center mb-1\" style=\"\n    gap: 13px;\n\">\n<i class=\"fa fa-regular fa-envelope\"></i>\nhello@example.com\n</span>\n<span class=\"d-flex mb-1\" style=\"\n    gap: 17px;\n\">\n<i class=\"fa fa-location-dot\" style=\"margin-top: 3px;\n\"></i>\n2972 Westheimer Rd. Santa Ana, \n<br>\nIllinois 85486\n</span>\n</span>\n\n<span class=\"d-block h6 mb-2 pb-1 mt-4\">\nMain Offices\n</span>\nMonday-Friday: 8am-5pm\n<br>\nSaturday: 9am-Midday\n</span>",
+            "humber_content_bottom": "© Olight 2025, All Rights Reserved."
+          }
+        }
+      },
+      "block_order": [
+        "menu_banner_classic_QpbpHq",
+        "menu_banner_classic_TXXFG7",
+        "menu_collection_LdDdz9",
+        "9d3d821c-82a9-439a-b2db-6700a3c6685f",
+        "0f4d122e-cf9d-4fbf-8082-85a6cb05155f",
+        "96e8331c-f8e4-4b9d-802b-4a659893f052",
+        "humbergerbar_kz4hBK"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/logo.png",
+        "logo_max_width": 125,
+        "enable_transparent": false,
+        "hover_transparent": false,
+        "enable_white": false,
+        "setwidth": "full",
+        "layout_header": "logo-center-navigation-left",
+        "type_sticky": "none",
+        "height_header": "normal",
+        "topbarbg": "#f5f5f5",
+        "topborderbg": "rgba(0,0,0,0)",
+        "textcolor-top": "#000000",
+        "background": "#ffffff",
+        "textcolor": "#22201d",
+        "linkcolor": "#22201d",
+        "linkhover": "#dbaf36",
+        "color_search": "#ffffff",
+        "color_icon_search": "#22201d",
+        "bg_search": "#ffffff",
+        "menutext": "#22201d",
+        "menutexthover": "#dbaf36",
+        "menudroptexttitle": "#524e4d",
+        "menudroptext": "#524e4d",
+        "menudropbg": "#ffffff",
+        "menudropborder": "#f1f1f1",
+        "main_linklist": "main-menu",
+        "font_family_menu": "--g-font-2",
+        "font_sizemenu": "13px",
+        "font_weight": "600",
+        "menu_spacing": 0,
+        "type_menu": "uppercase",
+        "menu_active": "thin-line",
+        "menu_label_text": "#ffffff",
+        "menu_label_new": "#01bad4",
+        "menu_label_hot": "#d24418",
+        "menu_label_sale": "#ffa800",
+        "menu_label_other": "#848484",
+        "link_list_search": "",
+        "sidebar_search": true,
+        "e_hd_currency": true,
+        "enable_image": true,
+        "enable_name": false,
+        "enable_language_selector": true,
+        "icon_cart": "icon",
+        "svg_cart": "cart-1",
+        "icon_wishlist": "icon",
+        "icon_login": "icon",
+        "e_link_login": "link",
+        "icon_search": "icon",
+        "show_humbergerbar": true,
+        "bg_humberger": "#ffffff",
+        "color_humberger_text": "#22201d"
+      }
+    },
+    "store-messages": {
+      "type": "store-messages",
+      "blocks": {
+        "118ade0e-615d-4bf4-83b4-e6bf6f2a6549": {
+          "type": "Item",
+          "settings": {
+            "code": "Our '22 Lookbook is live",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "118ade0e-615d-4bf4-83b4-e6bf6f2a6549"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": false,
+        "enable_homepage": false,
+        "background": "#36382d",
+        "gradient_bg": "",
+        "text": "#ffffff",
+        "paddingsection": "8px 0px 8px 0px",
+        "paddingmobile": "8px 0px 8px 0px",
+        "marginsection": "0px 0px 30px 0px",
+        "marginmobile": "0px 0px 20px 0px"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar-slide",
+    "scrolling_text_nRCERa",
+    "header",
+    "store-messages"
+  ]
+}

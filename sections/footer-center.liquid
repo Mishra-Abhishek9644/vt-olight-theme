@@ -1,0 +1,395 @@
+<style>
+    .shopify-section--footer-center {
+        background-color: {{ section.settings.background }};
+    }
+    #footer-center{{ section.id }} {
+        {%- if section.settings.padding_desktop != blank -%}
+          padding: {{ section.settings.padding_desktop }};
+        {%- endif -%}
+
+        border-width: {{ section.settings.border_width }};
+        border-style: solid;
+        border-color: {{ section.settings.border_color }};
+    }
+    @media(max-width: 767px){
+        #footer-center{{ section.id }} {
+          {% if section.settings.padding_mobile != blank %}
+            padding: {{ section.settings.padding_mobile }};
+          {% endif %}
+        }
+    }
+
+    .footer-center-social .site-footer__section {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    #footer-center{{ section.id }} .h6 {
+        margin: 0;
+    }
+    .footer-center-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 38px;
+        background-color: {{ section.settings.bg_social }};
+        border-radius: 2px;
+        color: {{ section.settings.color_social }};;
+    }
+    .footer-center-social a:hover {
+        background-color: var(--g-main);
+    }
+    .footer-center-social svg {
+        width: 20px;
+        height: 20px;
+    }
+    @media (max-width: 991px) {
+      .footer-center-social .site-footer__section {
+        padding: 0 0 20px;
+        gap: 14px;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .footer-center-contact.text-right {
+        text-align: center !important;
+      }
+    }
+</style>
+
+<div class="{{ section.settings.setwidth }}">
+    <div id="footer-center{{ section.id }}" class="footer-center">
+        <div class="row">
+            {%- for block in section.blocks -%}
+                {%- liquid
+                  case block.settings.width 
+                    when '16%' 
+                    assign block_width = 'col-lg-2 col-md-4' 
+                    when '20%' 
+                    assign block_width = 'col-1-5 col-md-6 col-12' 
+                    when '25%' 
+                    assign block_width = 'col-lg-3 col-md-6' 
+                    when '28%' 
+                    assign block_width = 'col-lg-3 col-md-6' 
+                    when '33%' 
+                    assign block_width = 'col-lg-4 col-md-6' 
+                    when '50%' 
+                    assign block_width = 'col-lg-6 col-md-12' 
+                    when '66%' 
+                    assign block_width = 'col-lg-8 col-md-12' 
+                    when '75%' 
+                    assign block_width = 'col-lg-9 col-md-12' 
+                    when '100%' 
+                    assign block_width = 'col-12' 
+                  endcase 
+                -%}
+                <div class="{{ block_width }}">
+                    {%- case block.type -%}
+                        {%- when 'social' -%}
+                            <div class="footer-center-social text-{{ block.settings.text_align }}">
+                                <div class="site-footer__section">
+                                    {%- if block.settings.title != blank -%}
+                                    <h4 style="color: {{ section.settings.text_color }}" class="h5 {{ block.settings.size_text }}">{{ block.settings.title }}</h4>
+                                    {%- endif -%}
+                                    <div class="site-footer__list site-footer-block">
+                                      {%- render 'block-social' -%}
+                                    </div>
+                                </div>
+                            </div>
+
+                        {%- when 'contact' -%}
+                            {% if  block.settings.title != blank %}
+                            <div style="color: {{ section.settings.text_color }}" class="footer-center-contact text-{{ block.settings.text_align }} {{ block.settings.size_text }}">
+                                {{ block.settings.title }}
+                            </div>
+                            {% endif %}
+
+                    {%- endcase -%}
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer Center",
+  "class": "shopify-section--footer-center",
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social accounts",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Follow us"
+        },
+        {
+          "type": "select",
+          "id": "size_text",
+          "default": "h2",
+          "options": [
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "label": "Heading Size"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text align",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "25%",
+          "options": [
+            {
+              "value": "16%",
+              "label": "16%"
+            },
+            {
+              "value": "20%",
+              "label": "20%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "name": "Contact",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Contact us"
+        },
+        {
+          "type": "select",
+          "id": "size_text",
+          "default": "h2",
+          "options": [
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "label": "Heading Size"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text align",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "25%",
+          "options": [
+            {
+              "value": "16%",
+              "label": "16%"
+            },
+            {
+              "value": "20%",
+              "label": "20%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "setwidth",
+      "label": "Full Width",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Box"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "default": "#202020",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#939393",
+      "label": "Color Text"
+    },
+    {
+      "type": "color",
+      "id": "bg_social",
+      "default": "#2d2d2d",
+      "label": "Background Social"
+    },
+    {
+      "type": "color",
+      "id": "color_social",
+      "default": "#8B8B8B",
+      "label": "Color Social"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color"
+    },
+    {
+      "type": "text",
+      "id": "border_width",
+      "label": "Border width",
+      "info": "Ex: 1px 1px 1px 1px , top right bot left"
+    },
+    {
+      "type": "text",
+      "id": "padding_desktop",
+      "label": "Padding Desktop",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "padding_mobile",
+      "label": "Padding Mobile",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,309 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "line_xy9mJG": {
+      "type": "line",
+      "settings": {
+        "animation": "",
+        "paddingsection": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "bgsection": "#ffffff",
+        "setwidth": "container-fluid",
+        "bgborder": "#eaeae9",
+        "wborder": "1px"
+      }
+    },
+    "newsletter-footer": {
+      "type": "newsletter-footer",
+      "settings": {
+        "enable_newletter_footer": true,
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "rgba(0,0,0,0)",
+        "newletter_color": "#22201d",
+        "bg_input": "#f4f3f1",
+        "color_input": "#a1a1a0",
+        "color_btn": "#ffffff",
+        "bg_colorbtn": "#dbaf36",
+        "color_btn_hover": "#ffffff",
+        "bg_colorbtn_hover": "#22201d",
+        "e_size": "cover",
+        "e_repeat": "no-repeat",
+        "title_top": "",
+        "title": "Subscribe to Our Newsletter",
+        "des": "Sign up to our newsletter for information on sales, delightful content \n<br>\nand new additions to the collection.",
+        "btn_newsletter": "Subscribe",
+        "html_left": false,
+        "html_left_block": "",
+        "paddingsection": "80px 0px 80px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "instagram_customize_zw37YM": {
+      "type": "instagram-customize",
+      "blocks": {
+        "image_QjWVde": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/o-h1-insta_2.png",
+            "image_link": ""
+          }
+        },
+        "image_a4hKLK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/o-h1-insta_1.png",
+            "image_link": ""
+          }
+        },
+        "image_cLry3B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/o-h1-insta_3.png",
+            "image_link": ""
+          }
+        },
+        "image_aHLAAL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/o-h1-insta_4.png",
+            "image_link": ""
+          }
+        },
+        "image_ULjthL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/o-h1-insta_1.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QjWVde",
+        "image_a4hKLK",
+        "image_cLry3B",
+        "image_aHLAAL",
+        "image_ULjthL"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "arrows": false,
+        "draggable": true,
+        "dots": false,
+        "infinite": true,
+        "show": 5,
+        "padding": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_kggDRM": {
+          "type": "text",
+          "settings": {
+            "logofooter": "shopify://shop_images/logo.png",
+            "widthlogofooter": 130,
+            "title": "",
+            "text": "Lorem ipsum dolor sit amet, conse elit, sedid do \n<br>\neiusmod tempor incidi ut labore et dolore magna \n<br>\naliqua. Quis ipsum usendi laboris mollit",
+            "social_facebook_link": "#",
+            "social_twitter_link": "#",
+            "social_pinterest_link": "",
+            "social_instagram_link": "#",
+            "social_tumblr_link": "",
+            "social_snapchat_link": "",
+            "social_youtube_link": "",
+            "social_vimeo_link": "",
+            "social_tiktok_link": "",
+            "footer_align_title": "left",
+            "width": "25%"
+          }
+        },
+        "1562342622030": {
+          "type": "menu",
+          "settings": {
+            "link_list": "shop-online",
+            "footer_align_title": "left",
+            "width": "16%"
+          }
+        },
+        "menu_TzFbG9": {
+          "type": "menu",
+          "settings": {
+            "link_list": "categories",
+            "footer_align_title": "left",
+            "width": "16%"
+          }
+        },
+        "menu_KdNztG": {
+          "type": "menu",
+          "settings": {
+            "link_list": "information",
+            "footer_align_title": "left",
+            "width": "16%"
+          }
+        },
+        "text_yBgGgK": {
+          "type": "text",
+          "settings": {
+            "widthlogofooter": 130,
+            "title": "Need Help?",
+            "text": "<span style=\"\n    display: block;\n    margin: 0 0 5px;\n\">\nHead Office: 785 15h Street, Office \n<br>\n478\nBerlin, De 81566\n</span>\n<span style=\"\n    display: block;\n\">\nTel: 0123456778\n<br>\nEmail: hello@aro-jewelry.com\n</span>",
+            "social_facebook_link": "",
+            "social_twitter_link": "",
+            "social_pinterest_link": "",
+            "social_instagram_link": "",
+            "social_tumblr_link": "",
+            "social_snapchat_link": "",
+            "social_youtube_link": "",
+            "social_vimeo_link": "",
+            "social_tiktok_link": "",
+            "footer_align_title": "left",
+            "width": "25%"
+          }
+        }
+      },
+      "block_order": [
+        "text_kggDRM",
+        "1562342622030",
+        "menu_TzFbG9",
+        "menu_KdNztG",
+        "text_yBgGgK"
+      ],
+      "settings": {
+        "setwidth": "container-fluid",
+        "background": "#ffffff",
+        "border_headfooter": "rgba(0,0,0,0)",
+        "border-copryright": "#e8e5e4",
+        "text": "#4b4b4a",
+        "text_hover": "#dbaf36",
+        "title": "#22201d",
+        "enable_border": false,
+        "footer_font_family": "--g-font-1",
+        "footer_font_size_title": 18,
+        "footer_font_weight": "500",
+        "footer_spacing": 0,
+        "footer_typetext": "capitalize",
+        "acc_mobile": true,
+        "e_ft_currency": false,
+        "enable_image": true,
+        "enable_name": true,
+        "enable_language_selector": false,
+        "payment_info": "img",
+        "show_copyright": false,
+        "copyright": false,
+        "customcopyright": "Copyright © 2024 Axetor. All rights reserved",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "m_padding_top": 52,
+        "m_padding_bottom": 52
+      }
+    },
+    "footer_center_n33j9R": {
+      "type": "footer-center",
+      "blocks": {
+        "social_LjUzLE": {
+          "type": "social",
+          "settings": {
+            "title": "connect with us",
+            "size_text": "h6",
+            "text_align": "left",
+            "width": "50%"
+          }
+        },
+        "contact_MwpMbW": {
+          "type": "contact",
+          "settings": {
+            "title": "customer service: (084) 123 - 456 88",
+            "size_text": "h6",
+            "text_align": "right",
+            "width": "50%"
+          }
+        }
+      },
+      "block_order": [
+        "social_LjUzLE",
+        "contact_MwpMbW"
+      ],
+      "disabled": true,
+      "settings": {
+        "setwidth": "container-fluid",
+        "background": "#1c1c1c",
+        "text_color": "#ffffff",
+        "bg_social": "#2d2d2d",
+        "color_social": "#8b8b8b",
+        "border_color": "",
+        "border_width": "1px 0 0",
+        "padding_desktop": "45px 0",
+        "padding_mobile": ""
+      }
+    },
+    "line_khTdda": {
+      "type": "line",
+      "settings": {
+        "animation": "fade",
+        "paddingsection": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "bgsection": "#ffffff",
+        "setwidth": "container-fluid",
+        "bgborder": "#e8e5e4",
+        "wborder": "1px"
+      }
+    },
+    "footer_copyright_DUiJXk": {
+      "type": "footer-copyright",
+      "blocks": {
+        "text_jJMM98": {
+          "type": "text",
+          "settings": {
+            "color_text": "#22201d",
+            "customcopyright": "<p>© Copyright 2025 <a href=\"#\" title=\"#\">Olight</a>. All rights reserved.</p>",
+            "text_align": "center",
+            "width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_jJMM98"
+      ],
+      "settings": {
+        "setwidth": "container-fluid",
+        "background": "#ffffff",
+        "border_color": "",
+        "border_width": "0",
+        "padding_desktop": "36px 0px 25px 0px",
+        "padding_mobile": "32px 0px 32px 0px"
+      }
+    }
+  },
+  "order": [
+    "line_xy9mJG",
+    "newsletter-footer",
+    "instagram_customize_zw37YM",
+    "footer",
+    "footer_center_n33j9R",
+    "line_khTdda",
+    "footer_copyright_DUiJXk"
+  ]
+}

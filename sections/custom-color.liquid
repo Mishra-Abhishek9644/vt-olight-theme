@@ -1,0 +1,78 @@
+<style>
+    
+        {%- for block in section.blocks -%}
+            {%- liquid 
+                assign name_color = block.settings.name_color | escape | downcase | handle
+                assign name_color_hex = block.settings.name_color_hex
+                assign name_color_hex_2 = block.settings.name_color_hex_2
+                assign image_color = block.settings.image_color
+                assign enable_color_2 = block.settings.enable_color_2
+                -%}
+            {%- if name_color != blank -%}
+                .st-color-{{ name_color }}{
+                    {%- if image_color != blank -%}
+                    background-image:{%- if image_color != blank -%} url({{ image_color | image_url: width: 64 }}) {%- else -%} inherit !important {%- endif -%};
+                    {%- else -%}
+                      {% if enable_color_2 %}
+                      background: linear-gradient(90deg, {{ name_color_hex }} 50%, {{ name_color_hex_2 }} 50%) !important;
+                      {% else %}
+                        background-color: {{ name_color_hex }} !important;
+                      {% endif %}
+                    {%- endif -%}
+                }
+            {%- endif -%}
+        {%- endfor -%}   
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Custom color Filter",
+  "class": "custom_color",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Customize color ",
+      "info": "This color help you customize color for filter and variant swatch product"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "color",
+      "name": "Color & Image",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name_color",
+          "label": "Name Color Variant",
+          "info": "This Name color variant"
+        },
+        {
+          "type": "color",
+          "id": "name_color_hex",
+          "label": "Color",
+          "default": "#000000"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_color_2",
+          "label": "Enable Color 2",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "name_color_hex_2",
+          "label": "Color",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_color",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

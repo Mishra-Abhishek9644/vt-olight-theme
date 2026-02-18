@@ -1,0 +1,794 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "grid_banner_G43VWM": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_qqQJkN": {
+          "type": "banner",
+          "settings": {
+            "width": "6",
+            "image": "shopify://shop_images/o-h1-banner_1_1.jpg",
+            "subtitle": "our earrings",
+            "color_subtitle": "#4b4b4a",
+            "title": "Add these \n<br>\nto your style \n<br>\nroster.",
+            "color_heading": "#22201d",
+            "size_text": "h3",
+            "description": "Grab the deal right now! you can get \n<br>\nextra 15% off this season.",
+            "bg_color": "#ffffff",
+            "colordef": "#4b4b4a",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "size_btn": "btn-sm",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "vertical": "top",
+            "horizontal": "left",
+            "text_align": "left"
+          }
+        },
+        "banner_aGBNpq": {
+          "type": "banner",
+          "settings": {
+            "width": "6",
+            "image": "shopify://shop_images/o-h1-banner_2.jpg",
+            "subtitle": "FAVORITE ITEMS",
+            "color_subtitle": "#4b4b4a",
+            "title": "Unique \n<br>\nEngagement \n<br>\nRings",
+            "color_heading": "#22201d",
+            "size_text": "h3",
+            "description": "From special antique diamonds to one \n<br>\nof-a-kind colored gemstones",
+            "bg_color": "#ffffff",
+            "colordef": "#4b4b4a",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "size_btn": "btn-sm",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "vertical": "top",
+            "horizontal": "left",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "banner_qqQJkN",
+        "banner_aGBNpq"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "no_gutter": true,
+        "show_overlay": false,
+        "gradient_overlay": true,
+        "bg_overlay": "#000000",
+        "opacity_overlay": 0.4,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "scrolling_text_qFqzHQ": {
+      "type": "scrolling-text",
+      "blocks": {
+        "item_fcAU93": {
+          "type": "item",
+          "settings": {
+            "code": "The Iconic Collection",
+            "image": "shopify://shop_images/o-h1-scroll_2.png"
+          }
+        },
+        "item_zHjwmV": {
+          "type": "item",
+          "settings": {
+            "code": "Color In Your Look",
+            "image": "shopify://shop_images/o-h1-scroll_2.png"
+          }
+        },
+        "item_zyAjN6": {
+          "type": "item",
+          "settings": {
+            "code": "Elegant And Everlasting",
+            "image": "shopify://shop_images/o-h1-scroll_2.png"
+          }
+        },
+        "item_AKz3Nb": {
+          "type": "item",
+          "settings": {
+            "code": "Black Friday Offer",
+            "image": "shopify://shop_images/o-h1-scroll_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_fcAU93",
+        "item_zHjwmV",
+        "item_zyAjN6",
+        "item_AKz3Nb"
+      ],
+      "settings": {
+        "animation": "fade",
+        "size_text": "p",
+        "text_style": "solid",
+        "text_transform": "capitalize",
+        "speed": 10,
+        "scroll_type": "from-right",
+        "background": "#ffffff",
+        "gradient_bg": "",
+        "text": "#22201d",
+        "size_icon": 16,
+        "radius_image": 0,
+        "space_image": "mx-4",
+        "paddingsection": "40px 0px 40px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "parallax_banner_f7eWVU": {
+      "type": "parallax-banner",
+      "blocks": {
+        "sub_title_eX4fay": {
+          "type": "sub_title",
+          "settings": {
+            "subtitle": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"41\" height=\"46\" viewBox=\"0 0 41 46\" fill=\"none\" style=\"\n    width: 41px;\n    height: 46px;\n\">\n<g>\n<path d=\"M30.475 14.454H10.525L0 25.157L20.4965 46L40.993 25.157L30.475 14.454ZM19.5645 19.4919V38.8171L13.5522 20.4824C13.2369 19.5133 13.391 18.4872 13.9797 17.6535C14.5683 16.8269 15.4792 16.3494 16.4813 16.3494C18.1841 16.3566 19.5645 17.7604 19.5645 19.4919ZM16.9298 36.772L8.05144 21.7152C7.60297 20.9527 7.7221 19.9907 8.33874 19.3637C8.70313 18.9931 9.17963 18.8007 9.67014 18.8007C9.81729 18.8007 9.96445 18.815 10.1116 18.8506C10.7563 19.0074 11.2678 19.4777 11.471 20.119L16.9298 36.772ZM15.8016 38.5464L3.97317 26.518C3.23739 25.7698 3.23739 24.5441 3.97317 23.7959L4.21142 23.5536C4.56879 23.1902 5.04529 22.9907 5.54982 22.9907C5.6269 22.9907 5.70398 22.9978 5.78807 23.005C6.36968 23.0762 6.88122 23.4111 7.18253 23.9242L15.8016 38.5464ZM24.0702 36.772L29.529 20.119C29.7392 19.4777 30.2437 19.0074 30.8884 18.8506C31.0355 18.815 31.1827 18.8007 31.3299 18.8007C31.8274 18.8007 32.3039 19.0002 32.6612 19.3637C33.2779 19.9907 33.397 20.9598 32.9486 21.7152L24.0702 36.772ZM27.4408 20.4824L21.4285 38.8171V19.4919C21.4285 17.7604 22.8159 16.3566 24.5117 16.3566C25.5138 16.3566 26.4247 16.834 27.0133 17.6606C27.6019 18.4872 27.7561 19.5133 27.4408 20.4824ZM25.1914 38.5464L33.8175 23.9242C34.1188 23.4111 34.6303 23.0762 35.2119 23.005C35.289 22.9978 35.3661 22.9907 35.4502 22.9907C35.9477 22.9907 36.4242 23.1902 36.7886 23.5536L37.0268 23.7959C37.7626 24.5441 37.7626 25.7698 37.0268 26.518L25.1914 38.5464Z\" fill=\"#DBAF36\"></path>\n<path d=\"M31.0216 2.82895H29.1577V5.28023C29.1577 7.44648 27.4269 9.20655 25.2966 9.20655C23.1664 9.20655 21.4356 7.44648 21.4356 5.28023V0H19.5716V5.28023C19.5716 7.44648 17.8408 9.20655 15.7106 9.20655C13.5804 9.20655 11.8425 7.44648 11.8425 5.28023V2.82895H9.97858V11.102H31.0216V2.82895Z\" fill=\"#DBAF36\"></path>\n</g>\n<defs>\n<clipPath id=\"clip0_321_2\">\n<rect width=\"41\" height=\"46\" fill=\"white\"></rect>\n</clipPath>\n</defs>\n</svg>"
+          }
+        },
+        "heading_xpn8M3": {
+          "type": "heading",
+          "settings": {
+            "title": "Jewellery from the \n<br>\nworld’s finest designers",
+            "size_text": "h3"
+          }
+        },
+        "paragraph_QdhGKV": {
+          "type": "paragraph",
+          "settings": {
+            "subtext": "We believe in the power of jewelry — to tell a story, celebrate a moment, create or continue a tradition. There’s a wonder in wearing something made from the earth.  Each Olight piece is crafted with ethically sourced precious metals to reflect our commitment to human rights and environmental sustainability."
+          }
+        },
+        "button_zCR6zA": {
+          "type": "button",
+          "settings": {
+            "button": "More About Us",
+            "link": "shopify://collections",
+            "style_btn": "btn-underline"
+          }
+        }
+      },
+      "block_order": [
+        "sub_title_eX4fay",
+        "heading_xpn8M3",
+        "paragraph_QdhGKV",
+        "button_zCR6zA"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "parrallax_enable": true,
+        "image": "shopify://shop_images/o-h1-banner.jpg",
+        "height_section": "580",
+        "height_section_mobile": "450",
+        "align": "center",
+        "position_text": "mid-center",
+        "bg_box": "rgba(0,0,0,0)",
+        "opacity_bgbox": 0,
+        "title_color": "#22201d",
+        "color_textbody": "#4b4b4a",
+        "bg_overlay": "#000000",
+        "padding_inner": "0px 0px 0px 0px",
+        "gradient_bg": "",
+        "opacity_bg_overlay": 0,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "product_list_swiper_yiVWmF": {
+      "type": "product-list-swiper",
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "color_s": "rgba(0,0,0,0)",
+        "title_top": "",
+        "title": "Our Best Sellers",
+        "des": "Our jewelry is made by the finest artists and carefully selected to reflect your style and personality",
+        "button_heading": "",
+        "link_heading": "",
+        "style_btn": "btn-underline btn-underline-white",
+        "align-heading": "center",
+        "collection": "rings",
+        "limit": 10,
+        "perviewDesktop": 6,
+        "spaceBetween": 30,
+        "nowrap": false,
+        "arrows": false,
+        "scrollbar": false,
+        "paddingsection": "80px 0px 60px 0px",
+        "paddingmobile": "40px 0px 20px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "featured_collections_5_DdG6NF": {
+      "type": "featured-collections-5",
+      "blocks": {
+        "collection_TbWyfC": {
+          "type": "collection",
+          "settings": {
+            "collection": "rings",
+            "image": "{{ block.settings.collection.image }}",
+            "subtitle": "Rings",
+            "color": "#ffffff",
+            "enable_gradient": false,
+            "bg_overlay": "#222222",
+            "opacity_overlay": 0
+          }
+        },
+        "collection_BtwyzY": {
+          "type": "collection",
+          "settings": {
+            "collection": "necklaces",
+            "image": "shopify://shop_images/o-h1-collec_4_8.jpg",
+            "subtitle": "necklaces",
+            "color": "#ffffff",
+            "enable_gradient": false,
+            "bg_overlay": "#222222",
+            "opacity_overlay": 0
+          }
+        },
+        "collection_zAfLzD": {
+          "type": "collection",
+          "settings": {
+            "collection": "earrings",
+            "subtitle": "earrings",
+            "color": "#ffffff",
+            "enable_gradient": false,
+            "bg_overlay": "#222222",
+            "opacity_overlay": 0
+          }
+        },
+        "collection_UA34XR": {
+          "type": "collection",
+          "settings": {
+            "collection": "rings",
+            "image": "shopify://shop_images/o-h1-collec_2_6.jpg",
+            "subtitle": "Necklaces",
+            "color": "#ffffff",
+            "enable_gradient": false,
+            "bg_overlay": "#222222",
+            "opacity_overlay": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_TbWyfC",
+        "collection_BtwyzY",
+        "collection_zAfLzD",
+        "collection_UA34XR"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "layout": "grid",
+        "col": "col-lg-3",
+        "enable_padding": false,
+        "show_count": false,
+        "size_image_col": "auto",
+        "size_title": "h5",
+        "padding_inner": "35px",
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "service_f9nQti": {
+      "type": "service",
+      "blocks": {
+        "service_jpeEXz": {
+          "type": "service",
+          "settings": {
+            "bgblock": "#ffffff",
+            "title": "Complimentary Shipping",
+            "description": "<span style=\"font-size: 16px;\">\nWe offer complimentary shipping and \n<br>\nreturns on all orders over $130.</span>",
+            "icon": "",
+            "img_icon": "shopify://shop_images/o-h1-service_4.png"
+          }
+        },
+        "service_9cx3eF": {
+          "type": "service",
+          "settings": {
+            "bgblock": "#ffffff",
+            "title": "Olight At Your Service",
+            "description": "<span style=\"font-size: 16px;\">\nOur client care experts are always \n<br>\nhere to help. </span>",
+            "icon": "",
+            "img_icon": "shopify://shop_images/o-h1-service_3.png"
+          }
+        },
+        "service_XEV78R": {
+          "type": "service",
+          "settings": {
+            "bgblock": "#ffffff",
+            "title": "Book an Appointment",
+            "description": "<span style=\"font-size: 16px;\">\nWe’re happy to help with in-store or \n<br>\nvirtual appointments.</span>",
+            "icon": "",
+            "img_icon": "shopify://shop_images/o-h1-service_2.png"
+          }
+        },
+        "service_VLMGtp": {
+          "type": "service",
+          "settings": {
+            "bgblock": "#ffffff",
+            "title": "The Iconic Blue Box",
+            "description": "<span style=\"font-size: 16px;\">\nYour Olight purchase comes wrapped in \n<br>\nour Blue Box packaging.</span>",
+            "icon": "",
+            "img_icon": "shopify://shop_images/o-h1-service_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "service_jpeEXz",
+        "service_9cx3eF",
+        "service_XEV78R",
+        "service_VLMGtp"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "title_sp": "",
+        "des": "",
+        "align-heading": "center",
+        "paddingbox": "0px 0px 0px 0px",
+        "paddingbox_xl": "0px 0px 0px 0px",
+        "paddingbox_mobile": "0px 0px 0px 0px",
+        "bg_box": "rgba(0,0,0,0)",
+        "iconcolor": "#222222",
+        "titlecolor": "#22201d",
+        "subcolor": "#4b4b4a",
+        "size": 46,
+        "service_heading": "h6",
+        "layout": "style-2",
+        "enable_carousel": false,
+        "arrows": false,
+        "draggable": true,
+        "dots": false,
+        "infinite": true,
+        "paddingsection": "60px 0px 60px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "line_KcX8BK": {
+      "type": "line",
+      "settings": {
+        "animation": "",
+        "paddingsection": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "bgsection": "#ffffff",
+        "setwidth": "container-fluid",
+        "bgborder": "#eaeae9",
+        "wborder": "1px"
+      }
+    },
+    "product_list_swiper_pbgNeR": {
+      "type": "product-list-swiper",
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "color_s": "rgba(0,0,0,0)",
+        "title_top": "",
+        "title": "Trend Products of The Week",
+        "des": "Our jewelry is made by the finest artists and carefully selected to reflect your style and personality",
+        "button_heading": "",
+        "link_heading": "",
+        "style_btn": "btn-underline btn-underline-white",
+        "align-heading": "center",
+        "collection": "necklaces",
+        "limit": 10,
+        "perviewDesktop": 6,
+        "spaceBetween": 30,
+        "nowrap": false,
+        "arrows": false,
+        "scrollbar": false,
+        "paddingsection": "80px 0px 60px 0px",
+        "paddingmobile": "40px 0px 20px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "grid_banner_a87xcE": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_hwQQNk": {
+          "type": "banner",
+          "settings": {
+            "width": "6",
+            "image": "shopify://shop_images/o-h1-banner_3.jpg",
+            "subtitle": "LUXURY NECKLACE",
+            "color_subtitle": "#4b4b4a",
+            "title": "Best Friend \n<br>\nJewelry",
+            "color_heading": "#22201d",
+            "size_text": "h3",
+            "description": "A wide range of exquisite \n<br>\nearrings",
+            "bg_color": "#ffffff",
+            "colordef": "#22201d",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "size_btn": "btn-sm",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "vertical": "top",
+            "horizontal": "left",
+            "text_align": "left"
+          }
+        },
+        "banner_NLW4mU": {
+          "type": "banner",
+          "settings": {
+            "width": "6",
+            "image": "shopify://shop_images/o-h1-banner_4.jpg",
+            "subtitle": "our earrings",
+            "color_subtitle": "#4b4b4a",
+            "title": "dlamond \n<br>\nstud earrings",
+            "color_heading": "#22201d",
+            "size_text": "h3",
+            "description": "A wide range of exquisite \n<br>\nearrings",
+            "bg_color": "#ffffff",
+            "colordef": "#22201d",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "size_btn": "btn-sm",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "vertical": "top",
+            "horizontal": "left",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "banner_hwQQNk",
+        "banner_NLW4mU"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "no_gutter": true,
+        "show_overlay": false,
+        "gradient_overlay": true,
+        "bg_overlay": "#000000",
+        "opacity_overlay": 0.4,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "scrolling_text_pbEgFd": {
+      "type": "scrolling-text",
+      "blocks": {
+        "item_bTDWMH": {
+          "type": "item",
+          "settings": {
+            "code": "Free Shipping Over $240 for Members",
+            "image": "shopify://shop_images/o-h1-scroll_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_bTDWMH"
+      ],
+      "settings": {
+        "animation": "fade",
+        "size_text": "p",
+        "text_style": "solid",
+        "text_transform": "capitalize",
+        "speed": 10,
+        "scroll_type": "from-right",
+        "background": "#ffffff",
+        "gradient_bg": "",
+        "text": "#22201d",
+        "size_icon": 16,
+        "radius_image": 0,
+        "space_image": "mx-4",
+        "paddingsection": "46px 0px 46px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "parallax_banner_EmgxEQ": {
+      "type": "parallax-banner",
+      "blocks": {
+        "sub_title_EL8mCf": {
+          "type": "sub_title",
+          "settings": {
+            "subtitle": "Our challenge to do better"
+          }
+        },
+        "heading_GBENRe": {
+          "type": "heading",
+          "settings": {
+            "title": "All of our jewellery\n<br>\n is handmade.",
+            "size_text": "h2"
+          }
+        },
+        "paragraph_nUWqtB": {
+          "type": "paragraph",
+          "settings": {
+            "subtext": "A gift they’ll treasure forever, Olight created diamonds jewelry \n<br>\ncombines precious metals with laboratory grown diamonds to \n<br>\nform captivating collections."
+          }
+        },
+        "button_AhhVYx": {
+          "type": "button",
+          "settings": {
+            "button": "Explore More",
+            "link": "shopify://collections",
+            "style_btn": "btn-theme"
+          }
+        }
+      },
+      "block_order": [
+        "sub_title_EL8mCf",
+        "heading_GBENRe",
+        "paragraph_nUWqtB",
+        "button_AhhVYx"
+      ],
+      "custom_css": [
+        "@media (max-width: 1199px) {.parallax-banner__meta::before {background-color: rgba(255, 255, 255, 0.5); }}"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "parrallax_enable": true,
+        "image": "shopify://shop_images/o-h1-imagebanner_1.jpg",
+        "height_section": "580",
+        "height_section_mobile": "450",
+        "align": "left",
+        "position_text": "mid-right",
+        "bg_box": "rgba(0,0,0,0)",
+        "opacity_bgbox": 0,
+        "title_color": "#22201d",
+        "color_textbody": "#4b4b4a",
+        "bg_overlay": "#ffffff",
+        "padding_inner": "115px",
+        "gradient_bg": "",
+        "opacity_bg_overlay": 0,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "0px 0px 0px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "quotes_iDVwAT": {
+      "type": "quotes",
+      "blocks": {
+        "quote_VdXQWN": {
+          "type": "quote",
+          "settings": {
+            "title": "“ Charming Golden Jevellery ”",
+            "author": "Alex Rony",
+            "info": "Fresh Design",
+            "rate": 5,
+            "quote": "Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus"
+          }
+        },
+        "quote_VJQEr4": {
+          "type": "quote",
+          "settings": {
+            "title": "“ Golden Bracelets ”",
+            "author": "Alex Rony",
+            "info": "Fresh Design",
+            "rate": 5,
+            "quote": "Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus"
+          }
+        },
+        "quote_Fnxbre": {
+          "type": "quote",
+          "settings": {
+            "title": "“ Charming Golden Jevellery ”",
+            "author": "Alex Rony",
+            "info": "Fresh Design",
+            "rate": 5,
+            "quote": "Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus"
+          }
+        },
+        "quote_N3QhjQ": {
+          "type": "quote",
+          "settings": {
+            "title": "“ Golden Bracelets ”",
+            "author": "Alex Rony",
+            "info": "Fresh Design",
+            "rate": 5,
+            "quote": "Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus"
+          }
+        }
+      },
+      "block_order": [
+        "quote_VdXQWN",
+        "quote_VJQEr4",
+        "quote_Fnxbre",
+        "quote_N3QhjQ"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "What Our Clients Say",
+        "des": "Adorn Yourself in Glamour: Find Your Perfect Piece Today",
+        "align-heading": "center",
+        "aligntext": "text-left",
+        "style": "style-1",
+        "color_heading": "#22201d",
+        "color_body": "#22201d",
+        "color_rate": "#f1f1f1",
+        "color_rated": "#dd8752",
+        "size_text": "txt-body",
+        "bg_item": "#f6f6f6",
+        "widthcolumn": 100,
+        "enable_padding_inner": true,
+        "show": 4,
+        "arrows": false,
+        "draggable": true,
+        "dots": false,
+        "infinite": true,
+        "paddingsection": "80px 0px 50px 0px",
+        "paddingmobile": "40px 0px 10px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "parallax_banner_zjeTBL": {
+      "type": "parallax-banner",
+      "blocks": {
+        "sub_title_PH4Mmk": {
+          "type": "sub_title",
+          "settings": {
+            "subtitle": "Olight Collection"
+          }
+        },
+        "heading_aMRLPx": {
+          "type": "heading",
+          "settings": {
+            "title": "Shop The Latest Trends",
+            "size_text": "h2"
+          }
+        },
+        "paragraph_9txENa": {
+          "type": "paragraph",
+          "settings": {
+            "subtext": "Exceptional Handcrafted Design to Enhance\n<br>\n the Magnificent Glow"
+          }
+        },
+        "button_ifiHAr": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Now",
+            "link": "shopify://collections",
+            "style_btn": "btn-theme btn-white"
+          }
+        }
+      },
+      "block_order": [
+        "sub_title_PH4Mmk",
+        "heading_aMRLPx",
+        "paragraph_9txENa",
+        "button_ifiHAr"
+      ],
+      "settings": {
+        "animation": "fade",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "parrallax_enable": true,
+        "image": "shopify://shop_images/o-h1-banner_5_1.jpg",
+        "height_section": "480",
+        "height_section_mobile": "450",
+        "align": "center",
+        "position_text": "mid-center",
+        "bg_box": "rgba(0,0,0,0)",
+        "opacity_bgbox": 0,
+        "title_color": "#22201d",
+        "color_textbody": "#22201d",
+        "bg_overlay": "#000000",
+        "padding_inner": "0px 0px 0px 0px",
+        "gradient_bg": "",
+        "opacity_bg_overlay": 0,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "featured_articles_WdzTUM": {
+      "type": "featured-articles",
+      "settings": {
+        "animation": "fade",
+        "setwidth": "container-fluid",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "Our Latest Blog",
+        "title_sp": "",
+        "des": "Adorn Yourself in Glamour: Find Your Perfect Piece Today",
+        "button_heading": "",
+        "link_heading": "",
+        "style_btn": "btn-underline btn-underline-white",
+        "button_bot": "",
+        "link_bot": "",
+        "style_btn_bot": "btn-underline btn-underline-white",
+        "align-heading": "center",
+        "blog": "news",
+        "item_style": "blog-1",
+        "enable_btn_blog": true,
+        "enable_btn_line": true,
+        "enable_date": true,
+        "enable_tag": true,
+        "enable_comment": false,
+        "enable_short": true,
+        "image_size": "auto",
+        "col_custom": false,
+        "arrows": false,
+        "draggable": true,
+        "dots": false,
+        "infinite": true,
+        "rows": "1",
+        "limit": 5,
+        "show": 4,
+        "paddingsection": "80px 0px 25px 0px",
+        "paddingmobile": "40px 0px 20px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    }
+  },
+  "order": [
+    "grid_banner_G43VWM",
+    "scrolling_text_qFqzHQ",
+    "parallax_banner_f7eWVU",
+    "product_list_swiper_yiVWmF",
+    "featured_collections_5_DdG6NF",
+    "service_f9nQti",
+    "line_KcX8BK",
+    "product_list_swiper_pbgNeR",
+    "grid_banner_a87xcE",
+    "scrolling_text_pbEgFd",
+    "parallax_banner_EmgxEQ",
+    "quotes_iDVwAT",
+    "parallax_banner_zjeTBL",
+    "featured_articles_WdzTUM"
+  ]
+}

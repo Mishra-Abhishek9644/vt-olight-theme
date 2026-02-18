@@ -1,0 +1,423 @@
+
+<!-- featured-collections-7.liquid -->
+{%- style -%}
+    .collection-list{{ section.id }}{
+      background:{{ section.settings.bgsection }};
+      margin: {{ section.settings.marginsection }}
+    }
+    #Bgcollection-{{ section.id }}{
+      padding: {{ section.settings.paddingsection }};
+    }
+    .collection-list{{ section.id }} .colgrid__box_item { 
+        display: flex;
+        align-items: center;
+    }
+    .collection-list{{ section.id }} .colgrid__box_list { 
+        padding: 175px 0;
+        max-width: 476px;
+        margin-left: auto;
+    }
+    .collection-list{{ section.id }} .container {
+        max-width: 990px
+    }
+    .collection-list{{ section.id }} .colgrid .colgrid__box {
+        min-height: auto;
+        border: none;
+        padding: 0;
+    }
+    .collection-list{{ section.id }} .colgrid .colgrid__box .colgrid__box--tit {
+        -webkit-text-stroke: 1px {{ section.settings.text_color }};
+        -webkit-text-fill-color: transparent;
+    }
+    .collection-list{{ section.id }} .colgrid .colgrid__box .colgrid__box--tit:hover {
+        -webkit-text-fill-color: {{ section.settings.text_color }};
+    }
+    .collection-list{{ section.id }} h4.colgrid__box--tit.h2 {
+      font-size: 72px;
+    }
+    h4.colgrid__box--tit svg {
+      opacity: 0;
+      width: 42px;
+      height: 62px;
+    }
+    h4.colgrid__box--tit:hover svg {
+      opacity: 1;
+    }
+    .colgrid-heading {
+      position: absolute;
+      top: 69px;
+      left: 51px;
+      z-index: 1;
+      writing-mode: vertical-lr;
+      letter-spacing: 13px;
+    }
+    @media (max-width:750px){
+      .collection-list{{ section.id }}{
+        margin: {{ section.settings.marginmobile }}
+      }
+      #Bgcollection-{{ section.id }}{
+        padding: {{ section.settings.paddingmobile }};
+      }
+      .collection-list{{ section.id }} .colgrid__box_item:not(:last-child) {
+        margin: 0 0 30px;
+      }
+    }
+{%- endstyle -%}
+<div class="collection-list{{ section.id }}" data-aos="{{ section.settings.animation }}" >
+    <div class="block-section bgcollection-{{ section.id }}" {%- if section.settings.custom_space != blank -%} style="{{ section.settings.custom_space }};background-color: {{ section.settings.bg_section }}" {%- endif -%} data-section-type="bgcollection" data-section-id="{{ section.id }}">
+    <div class="block_content bgcollection-wrapper">
+        <div class="colgrid" id="Bgcollection-{{ section.id }}">
+            {% if section.settings.title != blank %}
+            <div style="color: {{ section.settings.text_color }};" class="colgrid-heading d-none d-md-block {{ section.settings.size_text_heading }}">
+              {{ section.settings.title }}
+            </div>
+            {% endif %}
+
+            <div class="{{ section.settings.setwidth }} h-100">
+                <div class="colgrid__box_list d-flex flex-column h-100" style="z-index: 1;position: relative;">
+                    {%- for block in section.blocks limit: section.blocks.size -%}
+                    {%- liquid
+                        assign collection = collections[block.settings.collection]
+                        if block.settings.image != blank
+                            assign img_url = block.settings.image | image_url: width: 960
+                        else
+                            assign img_url = ''
+                        endif
+                    -%}
+                    <div class="colgrid__box_item" >
+                        <a class="colgrid__box lazyload colgrid__box-{{ block.id }} " href="{%- if collection.empty? -%}#{%- else -%}{{ collection.url }}{%- endif -%}" data-index="{{ forloop.index }}" data-bgset="{% render 'bgset', image: block.settings.image %}"
+                data-sizes="auto" data-src="background-image: url({{ img_url }})" data-index="{{ forloop.index }}" >
+                                <h4 class="colgrid__box--tit mb-0 {{ section.settings.size_text }}">
+                                    {%- if collection.empty? -%}
+                                        {{ 'homepage.onboarding.collection_title' | t }}
+                                    {%- else -%}
+                                        {{ collection.title }}
+                                    {%- endif -%}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                                      <path d="M36.75 0.375H40.625V4.25V31.375V35.25H32.875V31.375V13.5742L8.53516 38.0352L5.75 40.6992L0.300781 35.25L2.96484 32.4648L27.4258 8.125H9.625H5.75V0.375H9.625H36.75Z" fill="currentColor"/>
+                                    </svg>
+                                </h4>
+                        </a>
+                    </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+            <div class="colgrid__bg">
+            {%- for block in section.blocks limit: section.blocks.size -%}
+            {%- if block.settings.image != blank -%}
+                    {%- assign img_url = block.settings.image | image_url: width: 960 -%}
+                {%- else -%}
+                    {%- assign img_url = '' -%}
+                {%- endif -%}
+            <colgrid class=" d-block colgrid__bg--full lazyload" 
+            data-bgset="{% render 'bgset', image: block.settings.image %}"
+            data-sizes="auto" data-src="background-image: url({{ img_url }})" data-index="{{ forloop.index }}"></colgrid>
+            {%- endfor -%}
+            </div>
+        </div>
+
+        {%- if section.blocks.size == 0 -%}
+        {%- render 'no-blocks' -%}
+        {%- endif -%}
+    </div>
+    </div>
+</div>
+<style>
+</style>
+{% schema %}
+{
+  "name": "Collection list Text",
+  "class": "index-section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "select",
+      "id": "animation",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-down",
+          "label": "Fade Down"
+        },
+        {
+          "value": "fade-left",
+          "label": "Fade Left"
+        },
+        {
+          "value": "fade-right",
+          "label": "Fade Right"
+        },
+        {
+          "value": "fade-up-right",
+          "label": "Fade Up Right"
+        },
+        {
+          "value": "fade-up-left",
+          "label": "Fade Up Left"
+        },
+        {
+          "value": "fade-down-right",
+          "label": "Fade Down Right"
+        },
+        {
+          "value": "fade-down-left",
+          "label": "Fade Down Left"
+        },
+        {
+          "value": "flip-up",
+          "label": "Flip Up"
+        },
+        {
+          "value": "flip-down",
+          "label": "Flip Down"
+        },
+        {
+          "value": "flip-left",
+          "label": "Flip Left"
+        },
+        {
+          "value": "flip-right",
+          "label": "Flip Right"
+        },
+        {
+          "value": "slide-up",
+          "label": "Slide Up"
+        },
+        {
+          "value": "slide-down",
+          "label": "Slide Down"
+        },
+        {
+          "value": "slide-left",
+          "label": "Slide Left"
+        },
+        {
+          "value": "slide-right",
+          "label": "Slide Right"
+        },
+        {
+          "value": "zoom-in",
+          "label": "Zoom In"
+        },
+        {
+          "value": "zoom-in-up",
+          "label": "Zoom In Up"
+        },
+        {
+          "value": "zoom-in-down",
+          "label": "Zoom In Down"
+        },
+        {
+          "value": "zoom-in-left",
+          "label": "Zoom In Left"
+        },
+        {
+          "value": "zoom-in-right",
+          "label": "Zoom In Right"
+        },
+        {
+          "value": "zoom-out",
+          "label": "Zoom Out"
+        },
+        {
+          "value": "zoom-out-up",
+          "label": "Zoom Out Up"
+        },
+        {
+          "value": "zoom-out-down",
+          "label": "Zoom Out Down"
+        },
+        {
+          "value": "zoom-out-left",
+          "label": "Zoom Out Feft"
+        },
+        {
+          "value": "zoom-out-right",
+          "label": "Zoom Out Right"
+        }
+      ],
+      "label": "Select Animation"
+    },
+    {
+      "type": "select",
+      "id": "setwidth",
+      "label": "Full Width",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Box"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "bgsection",
+      "label": "Background Section",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Image with text"
+    },
+    {
+      "type": "select",
+      "id": "size_text_heading",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "label": "Heading Size"
+    },
+    {
+      "type": "header",
+      "content": "Setting Item"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+        "type": "select",
+        "id": "size_text",
+        "default": "h2",
+        "options": [
+            {
+                "value": "h2",
+                "label": "H2"
+            },
+            {
+                "value": "h3",
+                "label": "H3"
+            },
+            {
+                "value": "h4",
+                "label": "H4"
+            },
+            {
+                "value": "h5",
+                "label": "H5"
+            },
+            {
+                "value": "h6",
+                "label": "H6"
+            }
+        ],
+        "label": "Heading Size"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding "
+    },
+    {
+      "type": "text",
+      "id": "paddingsection",
+      "label": "Padding Section",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "paddingmobile",
+      "label": "Padding Section Mobile",
+      "default": "40px 0px 40px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "header",
+      "content": "Section Margin "
+    },
+    {
+      "type": "text",
+      "id": "marginsection",
+      "label": "Margin Section",
+      "default": "0px 0px 0px 0px",
+      "info": "Margin: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "marginmobile",
+      "label": "Margin Mobile",
+      "default": "0px 0px 0px 0px",
+      "info": "Margin: Top Right Bottom Left"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "label": "Collection",
+          "id": "collection",
+          "type": "collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list Text",
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

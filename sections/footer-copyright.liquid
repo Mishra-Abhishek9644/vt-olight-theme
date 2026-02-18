@@ -1,0 +1,414 @@
+<style>
+    .shopify-section--footer-copyright {
+        background-color: {{ section.settings.background }};
+    }
+    #footer-copyright-{{ section.id }} {
+        {%- if section.settings.padding_desktop != blank -%}
+          padding: {{ section.settings.padding_desktop }};
+        {%- endif -%}
+
+        border-width: {{ section.settings.border_width }};
+        border-style: solid;
+        border-color: {{ section.settings.border_color }};
+    }
+    .logo-footer {
+      margin: -84px 0 0;
+    }
+    .footer-copyright a {
+      color: var(--g-main)!important;
+    }
+    @media(max-width: 991px){
+        .logo-footer {
+          margin: 0;
+        }
+    }
+    @media(max-width: 767px){
+        #footer-copyright-{{ section.id }} {
+          {% if section.settings.padding_mobile != blank %}
+            padding: {{ section.settings.padding_mobile }};
+          {% endif %}
+        }
+        .logo-footer {
+          margin: 0;
+        }
+        .footer-copyright_text.text-left {
+          text-align: center !important;
+          margin: 0 0 15px;
+        }
+        .footer-copyright_text.text-left ,
+        .footer-copyright_payment.text-right {
+          text-align: center !important;
+        }
+        .footer-copyright .row {
+          gap: 15px  0;
+        }
+    }
+</style>
+
+<div class="{{ section.settings.setwidth }}">
+    <div id="footer-copyright-{{ section.id }}" class="footer-copyright">
+        <div class="row">
+            {%- for block in section.blocks -%}
+                {%- liquid
+                  case block.settings.width 
+                    when '16%' 
+                    assign block_width = 'col-lg-2 col-md-4' 
+                    when '20%' 
+                    assign block_width = 'col-1-5 col-md-6 col-12' 
+                    when '25%' 
+                    assign block_width = 'col-lg-3 col-md-12' 
+                    when '28%' 
+                    assign block_width = 'col-lg-3 col-md-6' 
+                    when '33%' 
+                    assign block_width = 'col-lg-4 col-md-4' 
+                    when '50%' 
+                    assign block_width = 'col-lg-6' 
+                    when '66%' 
+                    assign block_width = 'col-lg-8 col-md-12' 
+                    when '75%' 
+                    assign block_width = 'col-lg-9 col-md-12' 
+                    when '100%' 
+                    assign block_width = 'col-12' 
+                  endcase 
+                -%}
+                <div class="{{ block_width }}">
+                    {%- case block.type -%}
+                        {%- when 'text' -%}
+                            <style>
+                              .footer-copyright_text p {
+                                color: {{ block.settings.color_text }};
+                              }
+                            </style>
+                            <div class="footer-copyright_text text-{{ block.settings.text_align }}">
+                                <div class="my-lg-0">{{ block.settings.customcopyright }}</div>
+                            </div>
+
+                        {%- when 'logo' -%}
+                            <div class="footer-copyright_logo text-{{ block.settings.text_align }}">
+                                {%- if block.settings.bottom_logo != blank -%}
+                                    <div class="logo-footer footer__item-title">
+                                        <a href="{{ routes.root_url }}" class="header__logo-link">
+                                            <img style="width: {{ block.settings.bottom_logo_width }}px" loading="lazy" sizes="{{ block.settings.bottom_logo_width }}px" class="footer__image" alt="" 
+                                              src="{{ block.settings.bottom_logo | image_url: width: block.settings.bottom_logo.width }}" 
+                                              srcset="{{ block.settings.bottom_logo | image_url: width: 100 }} 100w, {{ block.settings.bottom_logo | image_url: width: 200 }} 200w, {{ block.settings.bottom_logo | image_url: width: 300 }} 300w, {{ block.settings.bottom_logo | image_url: width: 400 }} 400w, {{ block.settings.bottom_logo | image_url: width: 500 }} 500w" 
+                                              width="{{ block.settings.bottom_logo.width }}" height="{{ block.settings.bottom_logo.height }}">
+                                        </a>
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                        {%- when 'payment' -%}
+                            <div class="footer-copyright_payment text-{{ block.settings.text_align }}">
+                                {%- if block.settings.imgpayment != blank -%}
+                                    <img class="lazyload" src="{{ block.settings.imgpayment | image_url: width: 1, height: 1 }}" data-src="{{ block.settings.imgpayment | image_url: width: 400 }}" 
+                                      loading="lazy"
+                                      width="{{ block.settings.imgpayment.width }}"
+                                      height="{{ block.settings.imgpayment.height }}"/>
+                                {%- endif -%}
+                            </div>
+
+                    {%- endcase -%}
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer Copyright",
+  "class": "shopify-section--footer-copyright",
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+            "type": "color",
+            "id": "color_text",
+            "label": "Color Text",
+            "default": "#000"
+        },
+        {
+            "type": "richtext",
+            "id": "customcopyright",
+            "label": "Custom Copyright",
+            "default": "<p>© 2021, Your Store. Powered by Shopify</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text align",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "25%",
+          "options": [
+            {
+              "value": "16%",
+              "label": "16%"
+            },
+            {
+              "value": "20%",
+              "label": "20%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+            "type": "header",
+            "content": "Logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "bottom_logo",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "bottom_logo_width",
+          "min": 100,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Width logo",
+          "default": 125
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text align",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "25%",
+          "options": [
+            {
+              "value": "16%",
+              "label": "16%"
+            },
+            {
+              "value": "20%",
+              "label": "20%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "payment",
+      "name": "Payment",
+      "limit": 1,
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "imgpayment",
+            "label": "Image Payment"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text align",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "25%",
+          "options": [
+            {
+              "value": "16%",
+              "label": "16%"
+            },
+            {
+              "value": "20%",
+              "label": "20%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "setwidth",
+      "label": "Full Width",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Box"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "default": "#202020",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color"
+    },
+    {
+      "type": "text",
+      "id": "border_width",
+      "label": "Border width",
+      "info": "Ex: 1px 1px 1px 1px , top right bot left"
+    },
+    {
+      "type": "text",
+      "id": "padding_desktop",
+      "label": "Padding Desktop",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    },
+    {
+      "type": "text",
+      "id": "padding_mobile",
+      "label": "Padding Mobile",
+      "default": "0px 0px 0px 0px",
+      "info": "Padding: Top Right Bottom Left"
+    }
+  ]
+}
+{% endschema %}

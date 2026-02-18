@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "rb",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

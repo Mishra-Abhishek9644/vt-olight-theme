@@ -1,0 +1,43 @@
+<div class="humberger-right d-lg-flex align-items-center d-none" >
+    <a href="#" id="sidebarCollapse" data-toggle="collapse" aria-expanded="false" class="humberger align-items-center d-inline-flex disabled-anchor">
+        <span class="bar">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </span>
+    </a>
+    <div class="humbergerbar" id="sidebar">
+        <a id="dismiss" href="#" class="text-secondary small">
+            {% render 'icon-close' %}
+        </a>
+        <div class="row align-items-start justify-content-between flex-column mx-0">
+            <div class="humber-logo">
+                {%- render 'site-logo' -%}
+            </div>
+
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'humbergerbar' -%}
+                        {% if block.settings.humber_content != blank %}
+                        <div class="humber-content">
+                            {{ block.settings.humber_content }}
+                        </div>
+                        {% endif %}
+
+                        {% if block.settings.humber_center != blank %}
+                        <div class="humber-center">
+                            {{ block.settings.humber_center }}
+                        </div>
+                        {% endif %}
+
+                        {% if block.settings.humber_content_bottom != blank %}
+                        <div class="humber-content_bottom">
+                            {{ block.settings.humber_content_bottom }}
+                        </div>
+                        {% endif %}
+                {%- endcase -%}
+            {%- endfor-%}
+        </div>
+    </div>
+    <div class="overlaysidebar"></div>
+</div>
