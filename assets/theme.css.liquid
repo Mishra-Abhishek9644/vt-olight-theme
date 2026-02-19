@@ -1,3 +1,12 @@
+#ring-builder {
+  isolation: isolate;
+}
+
+#ring-builder * {
+  box-sizing: border-box;
+}
+
+
 .grid {
   *zoom: 1;
 }
@@ -25,6 +34,11 @@
   display: flex;
   width: 100%;
 }
+.rb-root .flex {
+  width: auto !important;
+}
+
+
 .flex__item {
   position: relative;
 
