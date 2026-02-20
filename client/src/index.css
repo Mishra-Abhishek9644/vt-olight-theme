@@ -6,7 +6,7 @@
   }
 
   .bg-brand {
-    background-color: rgb(128, 66, 148);
+    background-color: rgb(128, 66, 148) !important;
   }
 
   .container-lg {
@@ -71,3 +71,7 @@
 #ring-builder{
   all: unset !important;
 } 
+
+#ring-builder .bg-brand {
+  background-color: #804294 !important;
+}

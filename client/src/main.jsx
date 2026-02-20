@@ -10,12 +10,12 @@ const el = document.getElementById("ring-builder");
 
 if (el) {
   createRoot(el).render(
-  <StrictMode>
-    <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    </Provider>
-  </StrictMode>,
-)
+    <StrictMode>
+      <Provider store={store}>
+        <BrowserRouter basename="/pages/ring-builder">      
+        <App />
+        </BrowserRouter>
+      </Provider>
+    </StrictMode>,
+  )
 }

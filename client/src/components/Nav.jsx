@@ -6,7 +6,6 @@ import { setDiamond, setSetting, clearDiamond, clearSetting } from '../store/sli
 
 const Nav = () => {
 
-  const location = useLocation();  // <--- GET LOCATION HERE
   const selectedDiamond = useSelector(state => state.cart.selectedDiamond)
   const selectedSetting = useSelector(state => state.cart.selectedSetting)
   const dispatch = useDispatch()
@@ -29,10 +28,9 @@ const Nav = () => {
           to="/diamond"
           onClick={(e) => selectedDiamond && e.preventDefault()}
 
-          className={
-            location.pathname.startsWith("/diamond")
-              ? "flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 bg-brand text-white"
-              : "flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 bg-white text-gray-600"
+          className={({ isActive }) =>
+            `flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 ${isActive ? "!bg-brand text-white" : "bg-white text-gray-600"
+            }`
           }
         >
           <div className='flex items-center gap-2'>
@@ -54,7 +52,7 @@ const Nav = () => {
             {selectedDiamond && (
               <div className="text-xs hover:cursor-pointer"><Link to={`/diamond/${selectedDiamond?.sku || ""}`}><button className=' mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                 |
-               <Link to="/diamond"> <button className=' mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearDiamond())}>Remove</button></Link>
+                <Link to="/diamond"> <button className=' mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearDiamond())}>Remove</button></Link>
               </div>)}
           </div>
         </NavLink>
@@ -62,7 +60,7 @@ const Nav = () => {
         {/* ========== SETTINGS TAB ========== */}
         <NavLink
           to="/settings"
-          
+
           onClick={(e) => selectedSetting && e.preventDefault()}
 
           className={({ isActive }) =>
@@ -84,9 +82,9 @@ const Nav = () => {
           <div className="hidden md:block pr-2">
             <p className="font-semibold">{selectedSetting?.currency_symbol}{selectedSetting?.price}</p>
             {selectedSetting && (
-              <div className="text-xs hover:cursor-pointer"><Link to={`/settings /${selectedSetting?.id || ""}`}><button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
+              <div className="text-xs hover:cursor-pointer"><Link to={`/settings/${selectedSetting?.id || ""}`}><button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                 |
-              <Link to="/settings">  <button className='cursor pointer mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearSetting())}>Remove</button></Link>
+                <Link to="/settings">  <button className='cursor pointer mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearSetting())}>Remove</button></Link>
               </div>)}
           </div>
         </NavLink>
