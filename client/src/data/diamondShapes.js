@@ -20,7 +20,7 @@ const diamondShapes = [
   {
     id: 2,
     name: "Square Radiant",
-    img: window.themeAssets.sradiant,
+    img: sradiant,
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const diamondShapes = [
   {
     id: 8,
     name: "Round",
-    img: window.themeAssets.roundd,
+    img: roundd,
   },
   {
     id: 9,
@@ -60,7 +60,7 @@ const diamondShapes = [
   {
     id: 10,
     name: "Heart",
-    img: window.themeAssets.heart,
+    img: heart,
   },
   {
     id: 11,
