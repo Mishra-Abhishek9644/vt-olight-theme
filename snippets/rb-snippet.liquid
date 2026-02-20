@@ -1,4 +1,20 @@
 <div id="ring-builder" ></div>
 
+<script>
+  window.themeAssets = {
+    solitaire: "{{ 'solitaire.svg' | asset_url }}",
+    halo: "{{ 'halo.svg' | asset_url }}",
+    threestone: "{{ 'threestone.svg' | asset_url }}",
+    hiddenhalo: "{{ 'hiddenHalo.svg' | asset_url }}",
+    pave: "{{ 'pave.svg' | asset_url }}",
+    unique: "{{ 'unique.svg' | asset_url }}",
+    vintage: "{{ 'vintage.svg' | asset_url }}",
+    round: "{{ 'round.svg' | asset_url }}"
+  };
+</script>
+
+{{ 'RB.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'RB.js' | asset_url }}" defer></script>
+
 {{ 'RB.css' | asset_url | stylesheet_tag}}
 <script src="{{ 'RB.js' | asset_url}}" defer></script>

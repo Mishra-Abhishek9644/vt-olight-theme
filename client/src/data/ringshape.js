@@ -11,43 +11,44 @@ const diamondShapes = [
   {
     id: 1,
     name: "Solitaire",
-    img: solatire,
+    img: window.themeAssets.solitaire,
   },
   {
     id: 2,
     name: "Halo",
-    img: halo,
+    img: window.themeAssets.halo,
   },
   {
     id: 3,
     name: "Three Stone",
-    img: threestone,
+    img: window.themeAssets.threestone,
   },
   {
     id: 4,
     name: "Hidden Halo",
-    img: hiddenhalo,
+    img: window.themeAssets.hiddenhalo,
   },
   {
     id: 5,
     name: "Pave",
-    img: pave,
+    img: window.themeAssets.pave,
   },
   {
     id: 6,
     name: "Unique",
-    img: unique,
+    img: window.themeAssets.unique,
   },
   {
     id: 7,
     name: "Vintage",
-    img: vintage,
+    img: window.themeAssets.vintage,
   },
   {
     id: 8,
     name: "Round",
-    img: round,
+    img: window.themeAssets.round,
   },
 ];
+
 
 export default diamondShapes;
