@@ -49,11 +49,11 @@ const TableFilter = () => {
         value={tableRange}
         onChange={(v)=>updateRedux(v[0],v[1])}
         allowCross={false}
-         railStyle={{ background: "#E5E7EB", height: 5, borderRadius: 10 }}
-        trackStyle={[{ background: "rgb(128, 66, 148)", height: 5, borderRadius: 10 }]}
+         railStyle={{ background: "#000000", height: 5, borderRadius: 10 }}
+        trackStyle={[{ background: "rgb(219, 175, 55)", height: 5, borderRadius: 10 }]}
         handleStyle={[
-          { width: 15, height: 15, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" },
-          { width: 15, height: 15, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" }
+          { width: 15, height: 15, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" },
+          { width: 15, height: 15, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" }
         ]} />
 
       <div className="flex justify-between gap-4 mt-4 w-full">

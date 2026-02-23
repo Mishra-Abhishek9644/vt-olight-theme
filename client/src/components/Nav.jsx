@@ -3,18 +3,20 @@ import { NavLink, useLocation, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { setDiamond, setSetting, clearDiamond, clearSetting } from '../store/slices/cartSlice';
 
-
 const Nav = () => {
 
   const selectedDiamond = useSelector(state => state.cart.selectedDiamond)
   const selectedSetting = useSelector(state => state.cart.selectedSetting)
   const dispatch = useDispatch()
 
+  const location = useLocation()
+  console.log("PATH:", location.pathname)
+  const isDiamondActive = location.pathname.startsWith("/diamond")
   return (
 
     <div>
       <h1 className='text-brand font-weight-500 p-3 pl-0 text-xl sm:text-2xl md:text-3xl'>
-        <NavLink to='/diamond'
+        <NavLink to='/'
           onClick={(e) => selectedDiamond && e.preventDefault()}
 
         >Ring Builder</NavLink>
@@ -24,14 +26,12 @@ const Nav = () => {
         {/* 👆 Base mobile font small → scales up on bigger screens */}
 
         {/* ========== DIAMOND TAB ========== */}
+
         <NavLink
           to="/diamond"
-          onClick={(e) => selectedDiamond && e.preventDefault()}
-
-          className={({ isActive }) =>
-            `flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 ${isActive ? "!bg-brand text-white" : "bg-white text-gray-600"
-            }`
-          }
+         onClick={(e) => selectedDiamond && e.preventDefault()}
+          className={`flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 
+    ${isDiamondActive ? "bg-brand text-white" : "bg-white text-gray-600"}`}
         >
           <div className='flex items-center gap-2'>
 
@@ -56,7 +56,6 @@ const Nav = () => {
               </div>)}
           </div>
         </NavLink>
-
         {/* ========== SETTINGS TAB ========== */}
         <NavLink
           to="/settings"

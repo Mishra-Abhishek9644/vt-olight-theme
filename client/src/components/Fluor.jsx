@@ -39,11 +39,11 @@ const Fluor = () => {
         value={flourRange}
         onChange={handleSlider}
         allowCross={false}
-        railStyle={{ background: "#E5E7EB", height: 5, borderRadius: 10 }}
-        trackStyle={[{ background: "rgb(128, 66, 148)", height: 5, borderRadius: 10 }]}
+        railStyle={{ background: "#000000", height: 5, borderRadius: 10 }}
+        trackStyle={[{ background: "rgb(219, 175, 55)", height: 5, borderRadius: 10 }]}
         handleStyle={[
-          { width: 15, height: 15, bottom: 0, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" },
-          { width: 15, height: 15, bottom: 0, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" },
+          { width: 15, height: 15, bottom: 0, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" },
+          { width: 15, height: 15, bottom: 0, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" },
         ]}
         dots
         dotStyle={{
@@ -62,7 +62,7 @@ const Fluor = () => {
           borderRadius: 0,
         }}
         marks={FLUOR.reduce((acc, c, i) => {
-          acc[i] = <span style={{ fontSize: 14, fontWeight: 600, color: "#59359C" }}>{c}</span>;
+          acc[i] = <span style={{ fontSize: 14, fontWeight: 600, color: "#000000" }}>{c}</span>;
           return acc;
         }, {})}
       />

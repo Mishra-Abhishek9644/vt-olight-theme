@@ -15,7 +15,12 @@ export default defineConfig({
       output:{
         entryFileNames:'RB.js',
         chunkFileNames:'RB.js',
-        assetFileNames:'[name].[ext]'
+        assetFileNames: (assetInfo) => {
+  if (assetInfo.name.endsWith('.css')) {
+    return 'RB.css'
+  }
+  return '[name].[ext]'
+}
       }
     }
   }

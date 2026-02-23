@@ -2,11 +2,11 @@
 
 @layer utilities {
   .text-brand {
-    color: rgb(128, 66, 148);
+    color: rgb(219, 175, 55);
   }
 
   .bg-brand {
-    background-color: rgb(128, 66, 148) !important;
+    background-color: rgb(219, 175, 55) !important;
   }
 
   .container-lg {
@@ -63,7 +63,7 @@
 
 
   .border-brand {
-    border-color: rgb(128, 66, 148);
+    border-color: rgb(219, 175, 55);
   }
 
 }
@@ -73,5 +73,5 @@
 } 
 
 #ring-builder .bg-brand {
-  background-color: #804294 !important;
+  background-color: #dbaf37!important;
 }

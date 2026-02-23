@@ -35,11 +35,11 @@ const CutFilter = () => {
         value={cutRange}
         onChange={handleCutChange}
         allowCross={false}
-        railStyle={{ background: "#E5E7EB", height: 5, borderRadius: 10 }}
-        trackStyle={[{ background: "rgb(128, 66, 148)", height: 5, borderRadius: 10 }]}
+        railStyle={{ background: "#000000", height: 5, borderRadius: 10 }}
+        trackStyle={[{ background: "rgb(219, 175, 55)", height: 5, borderRadius: 10 }]}
         handleStyle={[
-          { width: 15, height: 15, bottom: 0, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" },
-          { width: 15, height: 15, bottom: 0, background: "rgb(128, 66, 148)", border: "none", borderRadius: "50%" },
+          { width: 15, height: 15, bottom: 0, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" },
+          { width: 15, height: 15, bottom: 0, background: "rgb(219, 175, 55)", border: "none", borderRadius: "50%" },
         ]}
         dots
         dotStyle={{
@@ -58,10 +58,10 @@ const CutFilter = () => {
           borderRadius: 0,
         }}
         marks={{
-          0: <span style={{ fontSize: 14, fontWeight: 600, color: "#59359C" }}>Good</span>,
-          1: <span style={{ fontSize: 14, fontWeight: 600, color: "#59359C" }}>Very Good</span>,
-          2: <span style={{ fontSize: 14, fontWeight: 600, color: "#59359C" }}>Excellent</span>,
-          3: <span style={{ fontSize: 14, fontWeight: 600, color: "#59359C" }}>Rare</span>
+          0: <span style={{ fontSize: 14, fontWeight: 600, color: "#000000" }}>Good</span>,
+          1: <span style={{ fontSize: 14, fontWeight: 600, color: "#000000" }}>Very Good</span>,
+          2: <span style={{ fontSize: 14, fontWeight: 600, color: "#000000" }}>Excellent</span>,
+          3: <span style={{ fontSize: 14, fontWeight: 600, color: "#000000" }}>Rare</span>
         }}
       />
     </div>
