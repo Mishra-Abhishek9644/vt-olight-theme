@@ -125,7 +125,7 @@ const View = () => {
             </div>
 
             {/* THUMBNAILS */}
-            <div className='grid grid-cols-3yo gap-3 mt-4'>
+            <div className='grid grid-cols-3 gap-3 mt-4'>
               {media.map((item, index) => (
                 <div
                   key={index}
