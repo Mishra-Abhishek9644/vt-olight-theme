@@ -6,9 +6,10 @@ import share from "../assets/share.svg"
 import truck from "../assets/truck.svg"
 import Metal from './Metal'
 import DiamondShapeSet from './DiamondShapeSet'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setSetting } from "../store/slices/cartSlice";
 import { setDiamond } from "../store/slices/cartSlice"
+import { toast } from 'react-toastify'
 
 
 
@@ -25,7 +26,7 @@ const View2 = () => {
     const [active, setActive] = useState("video");
 
     const selectedDiamond = useSelector(
-    (state) => state.cart.selectedDiamond);
+        (state) => state.cart.selectedDiamond);
     // ======================================================
     // ⭐ Fetch Single Diamond
     // ======================================================
@@ -185,17 +186,23 @@ const View2 = () => {
 
                         {/* Buttons */}
                         <div className='flex gap-2 items-center justify-start mt-2'>
-                           {!selectedDiamond ? (
-                             <Link to="/diamond"><button className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
-                                onClick={() => dispatch(setSetting(settingData))}
+                            {!selectedDiamond ? (
+                                <Link to="/diamond"><button className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
+                                    onClick={() => {
+                                        dispatch(setSetting(settingData))
+                                        toast.success("Setting Selected")
+                                    }}
+                                >
+                                    Select This Setting
+                                </button></Link>
+                            ) : (<Link to="/complete"><button className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
+                                onClick={() => {
+                                    dispatch(setSetting(settingData))
+                                    toast.success("Setting Selected")
+                                }}
                             >
                                 Select This Setting
-                            </button></Link>
-                           ):( <Link to="/complete"><button className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
-                                onClick={() => dispatch(setSetting(settingData))}
-                            >
-                                Select This Setting
-                            </button></Link>) }
+                            </button></Link>)}
 
                             <button>
                                 <img src={share} className='object-contain h-11 w-12 p-2 border-2 border-brand' />

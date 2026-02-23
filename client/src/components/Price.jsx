@@ -65,7 +65,7 @@ const Price = () => {
           value={minVal}
           onChange={(e) => setMinVal(e.target.value)}
           onBlur={() => updateRedux(+minVal, +maxVal)}     // Save only on finish ✔
-          className="w-1/2 border p-2 rounded"
+          className="w-1/2 border border-brand p-2 rounded"
         />
 
         <input
@@ -74,7 +74,7 @@ const Price = () => {
           value={maxVal}
           onChange={(e) => setMaxVal(e.target.value)}
           onBlur={() => updateRedux(+minVal, +maxVal)}     // Save only on finish ✔
-          className="w-1/2 border p-2 rounded"
+          className="w-1/2 border border-brand p-2 rounded"
         />
       </div>
     </div>

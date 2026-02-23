@@ -46,8 +46,8 @@ const RingShapeSet = () => {
               hover:scale-[1.03] hover:shadow-md
             `}
           >
-            <img src={shape.img} className="w-10 h-10 object-contain mb-1" />
-            <p className="text-xs font-medium text-center px-1 leading-tight">
+            <img src={shape.img} className="w-10 h-10 object-contain mb-1 invert" />
+            <p className="text-xs font-medium text-center px-1 leading-tight !text-black">
               {shape.name}
             </p>
           </div>

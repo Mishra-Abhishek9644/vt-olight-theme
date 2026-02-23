@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useLocation, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { setDiamond, setSetting, clearDiamond, clearSetting } from '../store/slices/cartSlice';
+import { toast } from "react-toastify"
 
 const Nav = () => {
 
@@ -17,7 +18,9 @@ const Nav = () => {
     <div>
       <h1 className='text-brand font-weight-500 p-3 pl-0 text-xl sm:text-2xl md:text-3xl'>
         <NavLink to='/'
-          onClick={(e) => selectedDiamond && e.preventDefault()}
+          onClick={(e) =>
+            selectedDiamond && (e.preventDefault(), toast.error("Remove diamond to select new diamond"))
+          }
 
         >Ring Builder</NavLink>
       </h1>
@@ -29,8 +32,9 @@ const Nav = () => {
 
         <NavLink
           to="/diamond"
-         onClick={(e) => selectedDiamond && e.preventDefault()}
-          className={`flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 text-black
+          onClick={(e) =>
+            selectedDiamond && (e.preventDefault(), toast.error("Remove diamond to select new diamond"))
+          } className={`flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 text-black
     ${isDiamondActive ? "bg-brand " : "bg-white "}`}
         >
           <div className='flex items-center gap-2'>
@@ -52,7 +56,11 @@ const Nav = () => {
             {selectedDiamond && (
               <div className="text-xs hover:cursor-pointer"><Link to={`/diamond/${selectedDiamond?.sku || ""}`}><button className=' mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                 |
-                <Link to="/diamond"> <button className=' mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearDiamond())}>Remove</button></Link>
+                <Link to="/diamond"> <button className=' mx-1 hover:scale-105 cursor-pointer'
+                  onClick={() => {
+                    dispatch(clearDiamond())
+                    toast.warn("Diamond Removed")
+                  }}>Remove</button></Link>
               </div>)}
           </div>
         </NavLink>
@@ -60,8 +68,9 @@ const Nav = () => {
         <NavLink
           to="/settings"
 
-          onClick={(e) => selectedSetting && e.preventDefault()}
-
+          onClick={(e) =>
+            selectedSetting && (e.preventDefault(), toast.error("Remove setting to select new setting"))
+          }
           className={({ isActive }) =>
             `flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 text-black ${isActive ? "bg-brand " : "bg-white "
             }`
@@ -83,7 +92,11 @@ const Nav = () => {
             {selectedSetting && (
               <div className="text-xs hover:cursor-pointer"><Link to={`/settings/${selectedSetting?.id || ""}`}><button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                 |
-                <Link to="/settings">  <button className='cursor pointer mx-1 hover:scale-105 cursor-pointer' onClick={() => dispatch(clearSetting())}>Remove</button></Link>
+                <Link to="/settings">  <button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'
+                  onClick={() => {
+                    dispatch(clearSetting())
+                    toast.warn("Setting Removed")
+                  }}>Remove</button></Link>
               </div>)}
           </div>
         </NavLink>
@@ -96,6 +109,7 @@ const Nav = () => {
             // if either item missing, block click
             if (!(selectedDiamond && selectedSetting)) {
               e.preventDefault();
+              toast.error("Please select diamond and setting first!")
             }
           }} className={({ isActive }) =>
             `flex-1 flex items-center gap-2 p-2 sm:p-3 text-black ${isActive ? "bg-brand " : "bg-white "

@@ -21,6 +21,7 @@
     "react-range-slider-input": "^3.3.2",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.6",
+    "react-toastify": "^11.0.5",
     "react-tooltip": "^5.30.0",
     "tailwindcss": "^4.1.17"
   },

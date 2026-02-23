@@ -8,6 +8,7 @@ import truck from "../assets/truck.svg"
 import { useDispatch, useSelector } from 'react-redux'
 import { setDiamond } from "../store/slices/cartSlice";
 import { setSetting } from "../store/slices/cartSlice"
+import { toast } from "react-toastify"
 
 
 // Helper: detect if video URL is a direct .mp4 file
@@ -172,7 +173,10 @@ const View = () => {
                 <Link to="/settings">
                   <button
                     className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
-                    onClick={() => dispatch(setDiamond(diamondData))}
+                    onClick={() => {
+                      dispatch(setDiamond(diamondData))
+                      toast.success('Diamond Selected')
+                    }}
                   >
                     Select This Diamond
                   </button>
@@ -181,7 +185,10 @@ const View = () => {
                 <Link to="/complete">
                   <button
                     className='bg-brand text-white text-base p-3 px-10 rounded-md hover:scale-105'
-                    onClick={() => dispatch(setDiamond(diamondData))}
+                    onClick={() => {
+                      dispatch(setDiamond(diamondData))
+                      toast.success('Diamond Selected')
+                    }}
                   >
                     Select This Diamond
                   </button>

@@ -69,7 +69,7 @@ const Carats = () => {
           step="0.1"
           onChange={(e) => setMinVal(e.target.value)}       // typing stays local
           onBlur={() => updateRedux(+minVal, +maxVal)}     // Save only on finish ✔
-          className="w-1/2 border p-2 rounded"
+          className="w-1/2 border border-brand p-2 rounded"
         />
 
         <input
@@ -79,7 +79,7 @@ const Carats = () => {
           max={30}
           onChange={(e) => setMaxVal(e.target.value)}       // typing local
           onBlur={() => updateRedux(+minVal, +maxVal)}     // Save only on finish ✔
-          className="w-1/2 border p-2 rounded"
+          className="w-1/2 border border-brand p-2 rounded"
         />
 
       </div>

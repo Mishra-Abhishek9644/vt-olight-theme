@@ -63,7 +63,7 @@
 
 
   .border-brand {
-    border-color: rgb(219, 175, 55);
+    border-color: rgb(219, 175, 55) !important;
   }
 
 }
@@ -76,3 +76,6 @@
   background-color: #dbaf37!important;
 }
 
+.Toastify__toast-container {
+  z-index: 999999 !important;
+}
