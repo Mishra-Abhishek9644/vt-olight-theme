@@ -61,7 +61,7 @@ const Card = ({ isCard }) => {
                     {diamonds.map((item) => (
                         <Link to={`/diamond/${item.sku}`}
                             key={item.sku}
-                            className="relative border p-4 rounded shadow text-center hover:scale-105 transition group overflow-hidden"
+                            className="relative border p-4 rounded shadow text-center hover:scale-105 border-brand transition group overflow-hidden"
                         >
                             <img
                                 src={item.image}

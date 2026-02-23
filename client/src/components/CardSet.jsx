@@ -60,7 +60,7 @@ const CardSet = ({ isCard }) => {
 
                         <Link to={`/settings/${item.id}`}
                             key={item.id}
-                            className="border p-4 rounded shadow text-center hover:scale-105 transition"
+                            className="border border-brand p-4 rounded shadow text-center hover:scale-105 transition"
                         >
                             <img
                                 src={item.image}
