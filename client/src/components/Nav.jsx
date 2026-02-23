@@ -30,8 +30,8 @@ const Nav = () => {
         <NavLink
           to="/diamond"
          onClick={(e) => selectedDiamond && e.preventDefault()}
-          className={`flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 
-    ${isDiamondActive ? "bg-brand text-white" : "bg-white text-gray-600"}`}
+          className={`flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 text-black
+    ${isDiamondActive ? "bg-brand " : "bg-white "}`}
         >
           <div className='flex items-center gap-2'>
 
@@ -63,7 +63,7 @@ const Nav = () => {
           onClick={(e) => selectedSetting && e.preventDefault()}
 
           className={({ isActive }) =>
-            `flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 ${isActive ? "bg-brand text-white" : "bg-white text-gray-600"
+            `flex-1 flex items-center justify-between gap-2 p-2 sm:p-3 text-black ${isActive ? "bg-brand " : "bg-white "
             }`
           }
         >
@@ -98,7 +98,7 @@ const Nav = () => {
               e.preventDefault();
             }
           }} className={({ isActive }) =>
-            `flex-1 flex items-center gap-2 p-2 sm:p-3 ${isActive ? "bg-brand text-white" : "bg-white text-gray-600"
+            `flex-1 flex items-center gap-2 p-2 sm:p-3 text-black ${isActive ? "bg-brand " : "bg-white "
             }`
           }
         >
