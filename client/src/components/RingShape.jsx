@@ -14,7 +14,7 @@ const RingShape = () => {
     <div className='flex flex-col justify-center items-start p-2  rounded-md w-full text-sm text-gray-900'>
 
       <div className='flex justify-start mb-auto items-center w-full px-2'>
-        <h2 className='text-xl text-gray-700 mb-1'>Ring Shape</h2>
+        <h2 className='text-xl text-black mb-1'>Ring Shape</h2>
 
         {/* Tooltip icon */}
         <a
@@ -47,7 +47,7 @@ const RingShape = () => {
             `}
           >
             <img src={shape.img} className="w-16 h-16  object-contain mb-1 invert" />
-            <p className="text-xs font-medium text-center px-1 leading-tight">
+            <p className="text-xs font-medium text-center px-1 leading-tight !text-black">
               {shape.name}
             </p>
           </div>

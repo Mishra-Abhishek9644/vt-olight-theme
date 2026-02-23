@@ -48,7 +48,7 @@ const DiamondShape = () => {
       `}
           >
             <img src={shape.img} className="w-12 h-12 object-contain mb-1" />
-            <p className="text-center text-sm font-medium px-1 leading-tight">
+            <p className="text-center text-sm font-medium px-1 leading-tight !text-black">
               {shape.name}
             </p>
           </div>
