@@ -37,7 +37,7 @@ const View = () => {
         setLoading(true);
         setError(null);
 
-        const res = await fetch(`http://localhost:3000/api/diamonds/${sku}`);
+        const res = await fetch(`https://server-alpha-ecru.vercel.app/api/diamonds/${sku}`);
         if (!res.ok) throw new Error("Failed to fetch diamond");
 
         const data = await res.json();

@@ -18,7 +18,7 @@ const CardSet = ({ isCard }) => {
             setSettings([])
 
             try {
-                const res = await fetch("http://localhost:3000/api/settings/filter", {
+                const res = await fetch("https://server-alpha-ecru.vercel.app/api/settings/filter", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({

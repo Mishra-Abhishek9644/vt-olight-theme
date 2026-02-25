@@ -214,7 +214,7 @@ npm install
 npm start
 
 
-Backend starts on: http://localhost:3000
+Backend starts on: https://server-alpha-ecru.vercel.app
 
 3️⃣ Install Frontend Dependencies
 cd ../frontend

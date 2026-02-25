@@ -16,7 +16,7 @@ const Card = ({ isCard }) => {
             setError(null);
             console.log(filters)
             try {
-                const res = await fetch("http://localhost:3000/api/diamonds/filter", {
+                const res = await fetch("https://server-alpha-ecru.vercel.app/api/diamonds/filter", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({

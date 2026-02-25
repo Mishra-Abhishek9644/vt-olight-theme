@@ -74,7 +74,7 @@ const View2 = () => {
                 setLoading(true);
                 setError(null);
 
-                const res = await fetch(`http://localhost:3000/api/settings/${id}`);
+                const res = await fetch(`https://server-alpha-ecru.vercel.app/api/settings/${id}`);
                 if (!res.ok) throw new Error("Failed to fetch setting");
 
                 const data = await res.json();
