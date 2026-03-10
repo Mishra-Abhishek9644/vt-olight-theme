@@ -65,7 +65,7 @@ const CompletePage = () => {
     const data = await response.json();
     const variantId = data.variantId.split("/").pop();
 
-    await fetch(`https://${SHOPIFY_STORE_DOMAIN}/cart/add.js`, {
+    await fetch(`/cart/add.js`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const CompletePage = () => {
       })
     });
 
-    window.location.href = `https://${SHOPIFY_STORE_DOMAIN}/checkout`;
+    window.location.href = `/checkout`;
 
   } catch (err) {
     console.error(err);
