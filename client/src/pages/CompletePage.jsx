@@ -20,7 +20,7 @@ const CompletePage = () => {
   const selectedSetting = useSelector(
     (state) => state.cart.selectedSetting);
 
-     const handleRemoveDiamond = () => {
+  const handleRemoveDiamond = () => {
     dispatch(clearDiamond());
     // send user back to diamond page so they can choose again
     navigate('/diamond');
@@ -35,16 +35,53 @@ const CompletePage = () => {
   const total = Number(selectedDiamond?.price) + Number(selectedSetting?.price);
 
   useEffect(() => {
-    if (!selectedDiamond ) {
+    if (!selectedDiamond) {
       navigate('/diamond')
     }
-     
-    if (!selectedSetting ) {
+
+    if (!selectedSetting) {
       navigate('/settings')
     }
-    
-  }, [selectedDiamond,selectedSetting])
-  
+
+  }, [selectedDiamond, selectedSetting])
+
+  const handleCheckout = async () => {
+  try {
+
+    const response = await fetch(
+      "https://server-alpha-ecru.vercel.app/api/create-ring",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          diamond: selectedDiamond,
+          setting: selectedSetting
+        })
+      }
+    );
+
+    const data = await response.json();
+    const variantId = data.variantId.split("/").pop();
+
+    await fetch(`https://${SHOPIFY_STORE_DOMAIN}/cart/add.js`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: variantId,
+        quantity: 1
+      })
+    });
+
+    window.location.href = `https://${SHOPIFY_STORE_DOMAIN}/checkout`;
+
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 
   return (
@@ -69,7 +106,7 @@ const CompletePage = () => {
           {selectedDiamond &&
             (<div className='flex m-0 p-0'>
 
-              <div className='w-1/3 p-1'><img  src={selectedDiamond?.image || product} alt={selectedDiamond?.sku || 'Select a Diamond'} className='w-full object-contain h-auto md:h-40 p-4 border border-gray-300' /></div>
+              <div className='w-1/3 p-1'><img src={selectedDiamond?.image || product} alt={selectedDiamond?.sku || 'Select a Diamond'} className='w-full object-contain h-auto md:h-40 p-4 border border-gray-300' /></div>
               <div className='w-2/3 flex flex-col gap-1 m-1 ml-4'>
                 <h2 className='text-md md:text-xl font-semibold'>  {selectedDiamond?.carat + "Carat"} {selectedDiamond?.shape + " Natural Diamond"}</h2>
                 {/* <p className='text-md md:text-xl text-gray-800'>LOLA DIAMOND ENGAGEMENT RING, WHITE GOLD 14K</p> */}
@@ -78,7 +115,7 @@ const CompletePage = () => {
                 <div className='flex justify-start gap-3 text-brand items-center w-2/3 text-xl mt-5 cursor-pointer'>
                   <Link to={`/diamond/${selectedDiamond?.sku || ""}`}><button className=' mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                   <p className='text-gray-700'>|</p>
-                 <button className='hover:scale-105 hover:cursor-pointer' onClick={() => dispatch(handleRemoveDiamond)}>Remove</button>
+                  <button className='hover:scale-105 hover:cursor-pointer' onClick={handleRemoveDiamond}>Remove</button>
                 </div>
               </div>
 
@@ -86,15 +123,19 @@ const CompletePage = () => {
           {selectedSetting && (
             <div className='flex m-0 p-0'>
 
-              <div className='w-1/3 p-1'><img  src={selectedSetting?.image || product} alt={selectedSetting?.id || 'Select a Diamond'} className='w-full h-auto md:h-40 p-4 border border-gray-300 object-contain' /></div>
+              <div className='w-1/3 p-1'><img
+                src={selectedSetting?.images?.[0] || product}
+                alt={selectedSetting?.id || "Select a Setting"}
+                className="w-full h-auto md:h-40 p-4 border border-gray-300 object-contain"
+              /></div>
               <div className='w-2/3 flex flex-col gap-1 m-1 ml-4'>
                 <h2 className='text-md md:text-xl font-semibold'>  {(selectedSetting?.title)}</h2>
                 {/* <p className='text-md md:text-xl text-gray-800'>LOLA DIAMOND ENGAGEMENT RING, WHITE GOLD 14K</p> */}
-                <div className='flex my-2 gap-3 items-center'><p className='text-2xl text-brand font-semibold'>{selectedSetting?.currency_symbol}{selectedSetting?.price}</p></div>
+                <div className='flex my-2 gap-3 items-center'><p className='text-2xl text-brand font-semibold'>{selectedSetting?.currency_symbol || "$"}{selectedSetting?.price}</p></div>
                 <div className='flex items-center gap-2 my-1'><img src={truck} alt="" />Add free engraving</div>
                 <div className='flex justify-start gap-3 text-brand items-center w-2/3 text-xl mt-5 '>
-<Link to={`/settings/${selectedSetting?.id || ""}`}><button className=' mx-1 hover:scale-105 cursor-pointer'>View</button></Link>                  <p className='text-gray-700'>|</p>
-                 <button className='hover:scale-105 hover:cursor-pointer' onClick={() => dispatch(handleRemoveSetting)}>Remove</button>
+                  <Link to={`/settings/${selectedSetting?.id || ""}`}><button className=' mx-1 hover:scale-105 cursor-pointer'>View</button></Link>                  <p className='text-gray-700'>|</p>
+                  <button className='hover:scale-105 hover:cursor-pointer' onClick={handleRemoveSetting}>Remove</button>
                 </div>
               </div>
 
@@ -133,7 +174,9 @@ const CompletePage = () => {
             {/* Apply Discount Code */}
 
             {/* Main Purple Button */}
-            <button className="w-full bg-brand text-white py-3 rounded-lg font-medium text-base my-1">
+            <button className="w-full bg-brand text-white py-3 rounded-lg font-medium text-base my-1"
+              onClick={handleCheckout}
+            >
               Procced To CheckOut
             </button>
 

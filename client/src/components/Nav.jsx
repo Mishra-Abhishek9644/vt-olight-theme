@@ -88,9 +88,9 @@ const Nav = () => {
             <div className="hidden md:block text-xl mx-1">|</div>)}
 
           <div className="hidden md:block pr-2">
-            <p className="font-semibold">{selectedSetting?.currency_symbol}{selectedSetting?.price}</p>
+            <p className="font-semibold">{selectedSetting?.currency_symbol || "$"}{selectedSetting?.price}</p>
             {selectedSetting && (
-              <div className="text-xs hover:cursor-pointer"><Link to={`/settings/${selectedSetting?.id || ""}`}><button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
+              <div className="text-xs hover:cursor-pointer"><Link to={`/settings/${selectedSetting?.id?.split("/").pop() || ""}`}><button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'>View</button></Link>
                 |
                 <Link to="/settings">  <button className='cursor pointer mx-1 hover:scale-105 cursor-pointer'
                   onClick={() => {

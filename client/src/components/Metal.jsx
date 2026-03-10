@@ -13,12 +13,12 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 const OPTIONS = [
-    { id: 1, src: white14, label: '14k', description: '14KT White Gold' },
-    { id: 2, src: white18, label: '18k', description: '18KT White Gold' },
-    { id: 3, src: rose14, label: '14k', description: '14KT Rose Gold' },
-    { id: 4, src: rose18, label: '18k', description: '18KT Rose Gold' },
-    { id: 5, src: gold14, label: '14k', description: '14KT Yellow Gold' },
-    { id: 6, src: gold18, label: '18k', description: '18KT Yellow Gold' },
+    { id: 1, src: white14, label: '14k', description: '14k White Gold' },
+    { id: 2, src: white18, label: '18k', description: '18k White Gold' },
+    { id: 3, src: rose14, label: '14k', description: '14k Rose Gold' },
+    { id: 4, src: rose18, label: '18k', description: '18k Rose Gold' },
+    { id: 5, src: gold14, label: '14k', description: '14k Yellow Gold' },
+    { id: 6, src: gold18, label: '18k', description: '18k Yellow Gold' },
 ];
 
 
