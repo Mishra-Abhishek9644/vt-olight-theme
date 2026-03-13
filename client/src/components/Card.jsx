@@ -20,6 +20,7 @@ const Card = ({ isCard }) => {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
+                        shape: filters.selectedDShape,
                         carat: filters.caratRange,     // your slice values
                         colorRange: filters.colorRange,
                         clarityRange: filters.clarityRange,

@@ -174,7 +174,7 @@ const CompletePage = () => {
             {/* Apply Discount Code */}
 
             {/* Main Purple Button */}
-            <button className="w-full bg-brand text-white py-3 rounded-lg font-medium text-base my-1"
+            <button className="w-full bg-brand text-white py-3 rounded-lg font-medium text-base my-1 hover:scale-95"
               onClick={handleCheckout}
             >
               Procced To CheckOut
