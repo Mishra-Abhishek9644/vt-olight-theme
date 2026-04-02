@@ -78,7 +78,7 @@ const CompletePage = () => {
       }
 
       // 2️⃣ Add BOTH items to cart
-      const addToCartResponse = await fetch(`/cart/add.js`, {
+      const addToCartResponse = await fetch(`${window.location.origin}/cart/add.js`,  {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
