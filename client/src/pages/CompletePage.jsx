@@ -98,7 +98,7 @@ const CompletePage = () => {
       });
 
       // 3️⃣ Redirect
-      window.location.href = `/checkout`;
+      window.location.href = `/cart/add`;
 
     } catch (err) {
       console.error(err);
