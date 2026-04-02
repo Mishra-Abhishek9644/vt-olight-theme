@@ -46,42 +46,64 @@ const CompletePage = () => {
   }, [selectedDiamond, selectedSetting])
 
   const handleCheckout = async () => {
-  try {
+    try {
 
-    const response = await fetch(
-      "https://server-alpha-ecru.vercel.app/api/create-ring",
-      {
+      // 1️⃣ Create diamond product
+      const response = await fetch(
+        "https://server-alpha-ecru.vercel.app/api/create-diamond",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            diamond: selectedDiamond,
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      const diamondVariantId = data.variantId.split("/").pop();
+
+      // 🔥 IMPORTANT: You must have this from your setting API
+      const settingVariantId = selectedSetting?.variantId?.split("/").pop();
+      console.log("SETTING:", selectedSetting);
+      console.log("SETTING VARIANT:", selectedSetting?.variantId);
+
+      // ❗ Safety check
+      if (!settingVariantId) {
+        console.error("Setting variantId missing");
+        return;
+      }
+
+      // 2️⃣ Add BOTH items to cart
+      await fetch(`/cart/add.js`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          diamond: selectedDiamond,
-          setting: selectedSetting
+          items: [
+            {
+              id: diamondVariantId,
+              quantity: 1
+            },
+            {
+              id: settingVariantId,
+              quantity: 1
+            }
+          ]
         })
-      }
-    );
+      });
 
-    const data = await response.json();
-    const variantId = data.variantId.split("/").pop();
+      // 3️⃣ Redirect
+      window.location.href = `/checkout`;
 
-    await fetch(`/cart/add.js`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        id: variantId,
-        quantity: 1
-      })
-    });
-
-    window.location.href = `/checkout`;
-
-  } catch (err) {
-    console.error(err);
-  }
-};
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
 
   return (
