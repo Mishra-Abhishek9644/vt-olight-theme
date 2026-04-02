@@ -78,7 +78,7 @@ const CompletePage = () => {
       }
 
       // 2️⃣ Add BOTH items to cart
-      await fetch(`/cart/add.js`, {
+      const addToCartResponse = await fetch(`/cart/add.js`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -97,8 +97,12 @@ const CompletePage = () => {
         })
       });
 
+      if (!addToCartResponse.ok) {
+        throw new Error("Failed to add items to cart");
+      }
+
       // 3️⃣ Redirect
-      window.location.href = `/cart/add`;
+      window.location.href = '/cart';
 
     } catch (err) {
       console.error(err);
