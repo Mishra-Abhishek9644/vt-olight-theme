@@ -78,19 +78,20 @@ const CompletePage = () => {
       }
 
       // 2️⃣ Add BOTH items to cart
-      const addToCartResponse = await fetch(`${window.location.origin}/cart/add.js`,  {
+      const addToCartResponse = await fetch(`${window.location.origin}/cart/add.js`, {
         method: "POST",
+        credentials: "same-origin",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
           items: [
             {
-              id: diamondVariantId,
+              id: Number(diamondVariantId),
               quantity: 1
             },
             {
-              id: settingVariantId,
+              id: Number(settingVariantId),
               quantity: 1
             }
           ]
@@ -107,6 +108,9 @@ const CompletePage = () => {
     } catch (err) {
       console.error(err);
     }
+    const responseText = await addToCartResponse.text();
+    const cartData = JSON.parse(responseText);
+    console.log("CART:", cartData);
   };
 
 
